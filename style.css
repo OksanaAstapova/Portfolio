@@ -75,6 +75,7 @@
 
 .info {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
@@ -83,11 +84,38 @@
   margin: 0 auto;
   width: 95%;
   color: black;
-  font-size: 230%;
-  line-height: 200%;
+  font-size: 2em;
+  line-height: 130%;
   font-family: Verdana, Arial, sans-serif;
   text-shadow: 0px 1px 1px #8c8c8c;
   user-select: none;
+}
+.info p {
+  margin: 0%;
+}
+
+.info__button {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 0.5em;
+  width: 10vw;
+  height: 5vh;
+  box-shadow: 1px 5px 2px #8c8c8c;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.info__button:active {
+  box-shadow: 0 3px 0 #8c8c8c;
+  transform: translateY(5px);
+}
+
+.info__button:hover {
+  background: rgba(177, 104, 232, 0.8745098039);
 }
 
 /*# sourceMappingURL=style.css.map */
