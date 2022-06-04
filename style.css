@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.home-page {
+.other-pages, .home-page {
   background-color: rgba(201, 198, 204, 0.831372549);
   background-position: center;
   background-repeat: no-repeat;
@@ -9,6 +9,10 @@
 
 .home-page {
   background-image: url(/assets/background/MyPortfolio.jpg);
+}
+
+.other-pages {
+  background-image: url(/assets/background/MyPortfolio1.jpg);
 }
 
 .menu {
@@ -21,6 +25,7 @@
 }
 
 .menu__button {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,6 +39,7 @@
   border-radius: 10px;
 }
 .menu__button a {
+  display: block;
   text-decoration: none;
   color: #230b25;
   font-family: "Poppins", Verdana, Arial, sans-serif;
@@ -141,5 +147,7 @@
   width: 70%;
   padding: 10px;
 }
+
+/*--------------About--------------*/
 
 /*# sourceMappingURL=style.css.map */

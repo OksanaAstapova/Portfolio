@@ -23,6 +23,11 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     background-image: url(/assets/background/MyPortfolio.jpg);
 }
 
+.other-pages{
+    @extend %bg-shared;
+    background-image: url(/assets/background/MyPortfolio1.jpg);
+}
+
 .menu{
     display: flex;
     justify-content: center;
@@ -33,6 +38,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .menu__button{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +48,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     @include border-radius(10px);
 
     a{
+        display: block;
         text-decoration: none;
         color: #230b25;
         font-family: $font;
@@ -139,3 +146,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     width: 70%;
     padding: 10px;
 }
+
+/*--------------About--------------*/
+
+
