@@ -1,0 +1,67 @@
+$font: Verdana, Arial, sans-serif;
+
+%bg-shared {
+    background-color: #c9c6ccd4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+@mixin border-radius($property) {
+    -webkit-border-radius: $property;
+    -moz-border-radius: $property;
+    -ms-border-radius: $property;
+    -o-border-radius: $property;
+    border-radius: $property;
+
+  }
+
+.home-page{
+    @extend %bg-shared;
+    background-image: url(/assets/background/MyPortfolio.jpg);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    height: 10vh;
+    font-size: 220%;
+    transition: all .1s linear;
+    @include border-radius(10px);
+
+    a{
+        text-decoration: none;
+        color: #230b25;
+        font-family: $font;
+        font-size: 1em;
+    }
+}
+
+.menu__button:hover{
+    cursor: pointer;
+    background-color: #e5e3e3;
+    opacity: 1;
+    border: 1.5px grey solid transparent;
+    box-shadow: 1px 5px 2px #8c8c8c;
+    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+    background-size: 4px 4px;
+    
+    }
+
+.menu__button:active{
+    box-shadow: 0 3px 0 #8c8c8c;
+    transform: translateY(5px);
+
+}
