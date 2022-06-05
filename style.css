@@ -236,5 +236,13 @@
 }
 
 /*------------inspiration-----------*/
+.gallery {
+  display: flex;
+  flex-direction: row;
+}
+
+.gallary__cards {
+  width: 10%;
+}
 
 /*# sourceMappingURL=style.css.map */
