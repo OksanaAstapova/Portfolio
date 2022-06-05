@@ -223,7 +223,8 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  border: 1.5px gray solid;
+  border: 1.5px rgba(177, 104, 232, 0.8745098039) solid;
+  background-color: rgba(177, 104, 232, 0.8745098039);
   height: 50px;
   width: 50px;
   font-family: "Poppins", Verdana, Arial, sans-serif;
@@ -233,5 +234,7 @@
   box-shadow: 0 3px 0 #8c8c8c;
   transform: translateY(5px);
 }
+
+/*------------inspiration-----------*/
 
 /*# sourceMappingURL=style.css.map */

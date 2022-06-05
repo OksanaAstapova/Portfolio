@@ -199,6 +199,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     margin: 0%;
     position: absolute;
     display: none;
+    
     border: 2px rgb(8, 8, 8) solid;
     background-color: lightgreen;
     border-radius: 10px;
@@ -221,7 +222,8 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 
     button{
         @include border-radius(50%);
-        border: 1.5px gray solid;
+        border: 1.5px #b168e8df solid;
+        background-color: #b168e8df;
         height: 50px;
         width: 50px;
         font-family: $font;
@@ -237,3 +239,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
         transform: translateY(5px);
     }
 }
+
+/*------------inspiration-----------*/
+
+
