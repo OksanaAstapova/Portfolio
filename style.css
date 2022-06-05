@@ -8,7 +8,7 @@
   margin: 0%;
 }
 
-.page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
+.screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
   cursor: pointer;
   background-color: #e5e3e3;
   opacity: 1;
@@ -192,7 +192,15 @@
 }
 
 .screen-wrapper {
-  border: 2px lightgreen solid;
+  border: 2px rgb(8, 8, 8) solid;
+  background-color: lightgreen;
+  height: 33.33%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.screen {
+  margin: 0%;
 }
 
 .screen__screenshot {
@@ -201,7 +209,25 @@
 
 .screen__figcaption {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-size: 1.2em;
+}
+.screen__figcaption button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-size: 1.1em;
+}
+.screen__figcaption button:active {
+  box-shadow: 0 3px 0 #8c8c8c;
+  transform: translateY(5px);
 }
 
 /*# sourceMappingURL=style.css.map */

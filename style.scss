@@ -195,7 +195,15 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .screen-wrapper{
-    border: 2px lightgreen solid;
+    border: 2px rgb(8, 8, 8) solid;
+    background-color: lightgreen;
+    height: 33.33%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.screen{
+    margin: 0%;
 }
 
 .screen__screenshot{
@@ -204,5 +212,25 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 
 .screen__figcaption{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $font;
+    font-size: 1.2em;
+
+    button{
+        @include border-radius(50%);
+        height: 50px;
+        width: 50px;
+        font-family: $font;
+        font-size: 1.1em;
+    }
+
+    button:hover{
+        @extend %hover-shared;
+    }
+
+    button:active{
+        box-shadow: 0 3px 0 #8c8c8c;
+        transform: translateY(5px);
+    }
 }
