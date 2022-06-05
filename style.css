@@ -239,10 +239,34 @@
 .gallery {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 5%;
 }
 
-.gallary__cards {
-  width: 10%;
+.gallery__card {
+  height: 230px;
+  width: 200px;
+  transition: 1s;
+}
+.gallery__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1.5px grey solid;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 1px 5px 2px #8c8c8c;
+}
+
+.gallery__card:hover {
+  transform: scale(1.2);
+  z-index: 1;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -64,28 +64,27 @@ const cardsData = [
     "alt": "Mistery pink nature"},
 
     {"name": "17",
-    "img": "assets/pict-inspiration/1.jpg",
+    "img": "assets/pict-inspiration/17.jpg",
     "alt": "Wonderful soap bubble"},
 
     {"name": "18",
-    "img": "assets/pict-inspiration/1.jpg",
+    "img": "assets/pict-inspiration/18.jpg",
     "alt": "Mistery nature"},
 
     {"name": "19",
-    "img": "assets/pict-inspiration/1.jpg",
+    "img": "assets/pict-inspiration/19.jpg",
     "alt": "Mistery nature"}
 ]
 
 let wrapper = document.querySelector(".gallery");
 let k;
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     for(let k=0; k<19; k++){
         let card = `<div class = "gallery__card">
         <img src="${cardsData[k].img}" alt="${cardsData[k].alt}">
         </div>`;
-wrapper.innerHTML += card;
+
+        wrapper.innerHTML += card;
     }
   })  
