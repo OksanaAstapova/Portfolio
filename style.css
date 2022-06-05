@@ -154,7 +154,9 @@
 .page {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  width: 90vw;
+  gap: 10%;
+  margin-left: 10%;
 }
 
 .page__left-side {
@@ -173,6 +175,7 @@
   width: 100px;
   height: 100px;
   font-family: "Poppins", Verdana, Arial, sans-serif;
+  border: 2px gray solid;
 }
 
 .page__button:not(.page__button_active):active {
@@ -186,21 +189,21 @@
 }
 
 .page__right-side {
-  display: flex;
-  flex-direction: column;
   margin-top: 10vh;
-}
-
-.screen-wrapper {
-  border: 2px rgb(8, 8, 8) solid;
-  background-color: lightgreen;
-  height: 33.33%;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
 .screen {
   margin: 0%;
+  position: absolute;
+  display: none;
+  border: 2px rgb(8, 8, 8) solid;
+  background-color: lightgreen;
+  border-radius: 10px;
+}
+
+.screen_active {
+  display: flex;
+  flex-direction: column;
 }
 
 .screen__screenshot {
@@ -220,6 +223,7 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  border: 1.5px gray solid;
   height: 50px;
   width: 50px;
   font-family: "Poppins", Verdana, Arial, sans-serif;
