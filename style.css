@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  margin: 0%;
 }
 
 .home-page {
@@ -25,10 +26,6 @@
 }
 
 .menu__button {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 24%;
   height: 10vh;
   transition: all 0.1s linear;
@@ -39,14 +36,19 @@
   border-radius: 10px;
 }
 .menu__button a {
-  display: block;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   text-decoration: none;
   color: #230b25;
   font-family: "Poppins", Verdana, Arial, sans-serif;
   font-size: 2em;
 }
 
-.menu__button:hover {
+.menu__button:not(.menu__button_active):hover {
   cursor: pointer;
   background-color: #e5e3e3;
   opacity: 1;
@@ -56,7 +58,7 @@
   background-size: 4px 4px;
 }
 
-.menu__button:active {
+.menu__button:not(.menu__button_active):active {
   box-shadow: 0 3px 0 #8c8c8c;
   transform: translateY(5px);
 }

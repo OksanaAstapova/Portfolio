@@ -8,6 +8,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    margin: 0%;
 }
 
 @mixin border-radius($property) {
@@ -38,17 +39,18 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .menu__button{
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 24%;
     height: 10vh;
     transition: all .1s linear;
     @include border-radius(10px);
 
     a{
-        display: block;
+        cursor: default;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
         text-decoration: none;
         color: #230b25;
         font-family: $font;
@@ -56,7 +58,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     }
 }
 
-.menu__button:hover{
+.menu__button:not(.menu__button_active):hover{
     cursor: pointer;
     background-color: #e5e3e3;
     opacity: 1;
@@ -67,7 +69,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     
 }
 
-.menu__button:active{
+.menu__button:not(.menu__button_active):active{
     box-shadow: 0 3px 0 #8c8c8c;
     transform: translateY(5px);
 }
@@ -76,7 +78,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     background: #b168e8df;
     border: 1.5px grey solid;
     @include border-radius(10px);
- 
+
 }
 
 .calendar{
