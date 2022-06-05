@@ -11,6 +11,16 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     margin: 0%;
 }
 
+%hover-shared{
+    cursor: pointer;
+    background-color: #e5e3e3;
+    opacity: 1;
+    border: 1.5px grey solid transparent;
+    box-shadow: 1px 5px 2px #8c8c8c;
+    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+    background-size: 4px 4px;
+}
+
 @mixin border-radius($property) {
     -webkit-border-radius: $property;
     -moz-border-radius: $property;
@@ -59,14 +69,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .menu__button:not(.menu__button_active):hover{
-    cursor: pointer;
-    background-color: #e5e3e3;
-    opacity: 1;
-    border: 1.5px grey solid transparent;
-    box-shadow: 1px 5px 2px #8c8c8c;
-    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
-    background-size: 4px 4px;
-    
+    @extend %hover-shared;
 }
 
 .menu__button:not(.menu__button_active):active{
@@ -149,6 +152,57 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     padding: 10px;
 }
 
-/*--------------About--------------*/
+/*--------------PROJECTS--------------*/
 
+.page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 
+.page__left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    margin-top: 10vh;
+}
+
+.page__button{
+    @include border-radius(50%);
+    width: 100px;
+    height: 100px;
+    font-family: $font;
+}
+
+.page__button:not(.page__button_active):hover{
+   @extend %hover-shared;
+}
+
+.page__button:not(.page__button_active):active{
+    box-shadow: 0 3px 0 #8c8c8c;
+    transform: translateY(5px);
+}
+
+.page__button_active{
+    background: #b168e8df;
+    border: 1.5px grey solid;
+}
+
+.page__right-side{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.screen-wrapper{
+    border: 2px lightgreen solid;
+}
+
+.screen__screenshot{
+    width: 60vw;
+}
+
+.screen__figcaption{
+    display: flex;
+    justify-content: space-between;
+}
