@@ -307,7 +307,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
             height: 100%;
             object-fit: cover;
             @include border-radius(10px);
-            }   
+        }   
     }
 }
 
@@ -319,4 +319,69 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     background-color: #000000c1;
     z-index: 2;
     margin: 0px;
+}
+
+/*----------CONTACTS--------------*/
+
+.box-wrapper{
+    background-image: url(/assets/background/contacts.png);
+    @extend %bg-shared;
+    width: 945px;
+    height: 550px;
+    min-height: unset;
+    object-fit: contain;
+    background-color: inherit;
+    margin: 0 auto;
+    @include border-radius(20px);
+    display: flex;
+    justify-content: space-around;
+
+    .call-me{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        
+        .call-me__heading{
+            font-size: 1.7em;
+            font-family: $font;
+            color: white;
+            text-align: center;
+            font-weight: lighter;
+        }
+
+        .call-me__button{
+            @include border-radius(20px);
+            font-family: $font;
+            font-size: 1.5em;
+            height: 100%;
+            width: 200px;
+            border: 2px gray solid;
+            background-color: white;
+        }
+
+        .call-me__button:hover{
+            @extend %hover-shared;
+            background-image: url(/assets/background/contact-buttons.png);
+        }
+
+        .call-me__button:active{
+            box-shadow: 0 3px 0 #8c8c8c;
+            transform: translateY(5px);
+        }
+    }
+
+    .call-you{
+
+        display: flex;
+        align-items: center;
+
+        .call-you__heading{
+            font-size: 1.7em;
+            font-family: $font;
+            color: rgb(8, 8, 8);
+            text-align: center;
+            font-weight: lighter;
+        }
+    }
 }

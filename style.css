@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.other-pages, .home-page {
+.box-wrapper, .other-pages, .home-page {
   background-color: rgba(201, 198, 204, 0.831372549);
   background-position: center;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   margin: 0%;
 }
 
-.screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
+.box-wrapper .call-me .call-me__button:hover, .screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
   cursor: pointer;
   background-color: #e5e3e3;
   opacity: 1;
@@ -319,6 +319,68 @@
   background-color: rgba(0, 0, 0, 0.7568627451);
   z-index: 2;
   margin: 0px;
+}
+
+/*----------CONTACTS--------------*/
+.box-wrapper {
+  background-image: url(/assets/background/contacts.png);
+  width: 945px;
+  height: 550px;
+  min-height: unset;
+  object-fit: contain;
+  background-color: inherit;
+  margin: 0 auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.box-wrapper .call-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+.box-wrapper .call-me .call-me__heading {
+  font-size: 1.7em;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: lighter;
+}
+.box-wrapper .call-me .call-me__button {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-size: 1.5em;
+  height: 100%;
+  width: 200px;
+  border: 2px gray solid;
+  background-color: white;
+}
+.box-wrapper .call-me .call-me__button:hover {
+  background-image: url(/assets/background/contact-buttons.png);
+}
+.box-wrapper .call-me .call-me__button:active {
+  box-shadow: 0 3px 0 #8c8c8c;
+  transform: translateY(5px);
+}
+.box-wrapper .call-you {
+  display: flex;
+  align-items: center;
+}
+.box-wrapper .call-you .call-you__heading {
+  font-size: 1.7em;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  color: rgb(8, 8, 8);
+  text-align: center;
+  font-weight: lighter;
 }
 
 /*# sourceMappingURL=style.css.map */
