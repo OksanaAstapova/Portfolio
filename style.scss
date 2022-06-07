@@ -279,7 +279,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     top: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
-        // display: none;
+    display: none;
     z-index: 999;
 
     .modal-card__close-btn{
@@ -312,7 +312,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .black-back{
-    // display: none;
+    display: none;
     width: 100vw;
     height: 100vh;
     position: absolute;

@@ -280,6 +280,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   flex-direction: column;
+  display: none;
   z-index: 999;
 }
 .modal-card .modal-card__close-btn {
@@ -311,6 +312,7 @@
 }
 
 .black-back {
+  display: none;
   width: 100vw;
   height: 100vh;
   position: absolute;

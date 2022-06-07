@@ -76,8 +76,8 @@ const cardsData = [
     "alt": "Mistery nature"}
 ]
 
-let wrapper = document.querySelector(".gallery");
 let k;
+let wrapper = document.querySelector(".gallery");
 
 document.addEventListener("DOMContentLoaded", () => {
     for(let k=0; k<19; k++){
@@ -87,4 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         wrapper.innerHTML += card;
     }
-  })  
+})
+
+/*------MODAL CARDS--------*/
