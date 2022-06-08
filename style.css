@@ -8,7 +8,7 @@
   margin: 0%;
 }
 
-.box-wrapper .call-me .call-me__button:hover, .screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
+.box-wrapper .call-you #form-contact .contact-form__button:hover, .box-wrapper .call-me .call-me__button:hover, .screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
   cursor: pointer;
   background-color: #e5e3e3;
   opacity: 1;
@@ -352,11 +352,11 @@
   font-weight: lighter;
 }
 .box-wrapper .call-me .call-me__button {
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
   font-family: "Poppins", Verdana, Arial, sans-serif;
   font-size: 1.5em;
   height: 100%;
@@ -374,6 +374,8 @@
 .box-wrapper .call-you {
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 .box-wrapper .call-you .call-you__heading {
   font-size: 1.7em;
@@ -381,6 +383,40 @@
   color: rgb(8, 8, 8);
   text-align: center;
   font-weight: lighter;
+}
+.box-wrapper .call-you #form-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.box-wrapper .call-you #form-contact .contact-form__input_file {
+  border-style: none;
+}
+.box-wrapper .call-you #form-contact .contact-form__input,
+.box-wrapper .call-you #form-contact .contact-form__button {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-size: 1em;
+  height: 100%;
+  width: 200px;
+  border: 1px rgb(8, 8, 8) solid;
+  background-color: white;
+}
+.box-wrapper .call-you #form-contact .contact-form__button {
+  background-color: #b168e8;
+  font-size: 1.5em;
+}
+.box-wrapper .call-you #form-contact .contact-form__button:hover {
+  background-image: url(/assets/background/contact-buttons.png);
+}
+.box-wrapper .call-you #form-contact .contact-form__button:active {
+  box-shadow: 0 3px 0 #8c8c8c;
+  transform: translateY(5px);
 }
 
 /*# sourceMappingURL=style.css.map */

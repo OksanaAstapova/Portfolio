@@ -351,7 +351,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
         }
 
         .call-me__button{
-            @include border-radius(20px);
+            @include border-radius(10px);
             font-family: $font;
             font-size: 1.5em;
             height: 100%;
@@ -375,13 +375,53 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 
         display: flex;
         align-items: center;
-
+        flex-direction: column;
+        justify-content: center;
+        
         .call-you__heading{
             font-size: 1.7em;
             font-family: $font;
             color: rgb(8, 8, 8);
             text-align: center;
             font-weight: lighter;
+        }
+
+        #form-contact{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+            .contact-form__input_file{
+                border-style: none;
+            }
+            .contact-form__input,
+            .contact-form__button{
+            @include border-radius(10px);
+            font-family: $font;
+            font-size: 1em;
+            height: 100%;
+            width: 200px;
+            border: 1px rgb(8, 8, 8) solid;
+            background-color: white;
+            }
+
+            .contact-form__button{
+                background-color: #b168e8;
+                font-size: 1.5em;
+            }
+
+            .contact-form__button:hover{
+                @extend %hover-shared;
+                background-image: url(/assets/background/contact-buttons.png)
+            }
+
+            .contact-form__button:active{
+                box-shadow: 0 3px 0 #8c8c8c;
+                transform: translateY(5px);
+            }
+
+            
         }
     }
 }
