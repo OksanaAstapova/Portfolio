@@ -55,7 +55,6 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     @include border-radius(10px);
 
     a{
-        cursor: default;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,6 +80,13 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     background: #b168e8df;
     border: 1.5px grey solid;
     @include border-radius(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #230b25;
+    font-family: $font;
+    font-size: 2em;
+    user-select: none;
 
 }
 
@@ -253,7 +259,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 .gallery__card{
     height: 230px;
     width: 200px;
-    transition: 1s;
+    transition: 0.3s;
 
 
     img{
@@ -267,7 +273,8 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .gallery__card:hover{
-    transform: scale(1.2);
+    transform: rotate(-5deg) scale(1.1);
+    transition: .5s;
     z-index: 1;
     cursor: pointer;
 }
@@ -284,8 +291,12 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     top: 50%;
     transform: translate(-50%, -50%);
     flex-direction: column;
-    display: none;
     z-index: 999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s linear,opacity 1s linear;
+    
+
 
     .modal-card__close-btn{
         width: 60px;
@@ -301,6 +312,16 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
             object-fit: cover;
         }    
         
+    }
+
+    .modal-card__close-btn:hover{
+        transform: scale(1.2);
+        transition:  all .2s linear;
+    }
+
+    .modal-card__close-btn:active{
+        
+        transform: translateY(5px);
     }
 
     .modal-card__wrapper{
@@ -321,10 +342,12 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     width: 100vw;
     height: 100vh;
     position: absolute;
-    background-color: #000000c1;
+    background-color: #000000dd;
     z-index: 2;
     margin: 0px;
 }
+
+
 
 /*----------CONTACTS--------------*/
 

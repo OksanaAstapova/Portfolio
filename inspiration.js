@@ -101,7 +101,8 @@ let modalWrapper = document.querySelector("modal-card__wrapper");
 function openModal(k){
 
     blackBack.style.display = "flex";
-    modal.style.display = "flex";
+    modal.style.visibility = "visible";
+    modal.style.opacity = "1";
     body.style.overflow = "hidden";
 
     let modalWrapper = `<button class="modal-card__close-btn" onclick="closeModal()">
@@ -118,8 +119,9 @@ function openModal(k){
 function closeModal(){
     modal.innerHTML = "";
     blackBack.style.display = "none";
-    modal.style.display = "none";
+    modal.style.visibility = "hidden";
     body.style.overflow = "visible";
+    
 }
 
 

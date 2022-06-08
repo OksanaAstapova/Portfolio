@@ -46,7 +46,6 @@
   border-radius: 10px;
 }
 .menu__button a {
-  cursor: default;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +70,13 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #230b25;
+  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-size: 2em;
+  user-select: none;
 }
 
 .calendar {
@@ -252,7 +258,7 @@
 .gallery__card {
   height: 230px;
   width: 200px;
-  transition: 1s;
+  transition: 0.3s;
 }
 .gallery__card img {
   width: 100%;
@@ -268,7 +274,8 @@
 }
 
 .gallery__card:hover {
-  transform: scale(1.2);
+  transform: rotate(-5deg) scale(1.1);
+  transition: 0.5s;
   z-index: 1;
   cursor: pointer;
 }
@@ -284,8 +291,10 @@
   top: 50%;
   transform: translate(-50%, -50%);
   flex-direction: column;
-  display: none;
   z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s linear, opacity 1s linear;
 }
 .modal-card .modal-card__close-btn {
   width: 60px;
@@ -299,6 +308,13 @@
   width: 125%;
   height: 125%;
   object-fit: cover;
+}
+.modal-card .modal-card__close-btn:hover {
+  transform: scale(1.2);
+  transition: all 0.2s linear;
+}
+.modal-card .modal-card__close-btn:active {
+  transform: translateY(5px);
 }
 .modal-card .modal-card__wrapper {
   height: 500px;
@@ -320,7 +336,7 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7568627451);
+  background-color: rgba(0, 0, 0, 0.8666666667);
   z-index: 2;
   margin: 0px;
 }
