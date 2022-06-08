@@ -273,6 +273,10 @@
   cursor: pointer;
 }
 
+.gallery__card:active {
+  transform: none;
+}
+
 .modal-card {
   display: flex;
   position: absolute;

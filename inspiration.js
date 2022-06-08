@@ -81,7 +81,7 @@ let wrapper = document.querySelector(".gallery");
 
 document.addEventListener("DOMContentLoaded", () => {
     for(let k=0; k<19; k++){
-        let card = `<div class = "gallery__card">
+        let card = `<div class = "gallery__card" onclick="openModal(${k})">
         <img src="${cardsData[k].img}" alt="${cardsData[k].alt}">
         </div>`;
 
@@ -89,4 +89,37 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 })
 
+
 /*------MODAL CARDS--------*/
+
+let modal = document.querySelector(".modal-card");
+let blackBack = document.querySelector(".black-back");
+let cancel = document.querySelector(".modal-card__close-btn");
+let body = document.querySelector(".body");
+let modalWrapper = document.querySelector("modal-card__wrapper");
+
+function openModal(k){
+
+    blackBack.style.display = "flex";
+    modal.style.display = "flex";
+    body.style.overflow = "hidden";
+
+    let modalWrapper = `<button class="modal-card__close-btn" onclick="closeModal()">
+                <img src="/assets/icons/close-btn.png" alt="close button">
+                        </button>
+                        <div class="modal-card__wrapper">
+                <img src="${cardsData[k].img}" alt="${cardsData[k].alt}"> 
+                        </div>`;
+
+        modal.innerHTML += modalWrapper;
+        
+}
+
+function closeModal(){
+    modal.innerHTML = "";
+    blackBack.style.display = "none";
+    modal.style.display = "none";
+    body.style.overflow = "visible";
+}
+
+
