@@ -1,10 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.box-wrapper, .start-page, .sections {
-  background-color: rgba(201, 198, 204, 0.831372549);
+.box-wrapper, .sections {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
   margin: 0%;
 }
 
@@ -21,15 +19,21 @@
 .sections {
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   width: 100vw;
+  height: calc(100vh - 74px);
 }
 
 .start-page {
-  background-image: url(/assets/background/MyPortfolio.jpg);
-  height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.inspiration-page {
+  overflow-y: scroll;
 }
 
 .body {
   margin: 0;
+  background-image: url(/assets/background/MyPortfolio1.jpg);
 }
 .body .sections {
   position: absolute;
@@ -78,13 +82,16 @@
 
 .clock {
   box-shadow: inset 0 0 0 0.02em #000;
-  display: inline-block;
+  display: flex;
   border-radius: 0.5em;
-  position: relative;
+  position: absolute;
   font-size: 250px;
   overflow: hidden;
   height: 1em;
   width: 1em;
+  margin-top: 4%;
+  margin-left: 5%;
+  z-index: 1;
 }
 
 .clock::after {
@@ -415,11 +422,20 @@
   left: 50%;
 }
 
+.girl {
+  position: absolute;
+  display: flex;
+  bottom: 0%;
+  left: calc(50vw - 280px);
+  width: 560px;
+  z-index: 0;
+}
+
 .info {
   display: flex;
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
   gap: 3vh;
@@ -431,6 +447,7 @@
   font-family: "Poppins", Verdana, Arial, sans-serif;
   text-shadow: 0px 1px 1px #8c8c8c;
   user-select: none;
+  z-index: 1;
 }
 .info p {
   margin: 0%;
@@ -449,6 +466,8 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+  margin-bottom: 8px;
+  z-index: 1;
 }
 
 .info__button:active {
@@ -464,23 +483,28 @@
   display: flex;
   flex-direction: column;
   position: absolute;
-  right: 0;
+  right: -80px;
   bottom: 0;
-  border: 1.5px gray solid;
+  border: 1.5px rgb(17, 17, 17) solid;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
-  width: 8vw;
+  background-image: url(/assets/background/contact-buttons.png);
+  width: 80px;
   text-align: center;
   box-shadow: -1px 5px 2px #8c8c8c;
+  transition: 0.5s;
 }
 
 .links__img {
   width: 70%;
   padding: 10px;
+}
+
+.links_appear {
+  right: 0px;
 }
 
 /*--------------PROJECTS--------------*/
@@ -589,7 +613,7 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .gallery__card {

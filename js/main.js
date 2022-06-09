@@ -2,6 +2,7 @@ let welcomeBtn = document.querySelector(".menu__button_welcome");
 let projectsBtn = document.querySelector(".menu__button_projects");
 let inspirationBtn = document.querySelector(".menu__button_inspiration");
 let contactsBtn = document.querySelector(".menu__button_contacts");
+let start_pageBtn = document.querySelector(".info__button");
 
 welcomeBtn.addEventListener("click", ()=>{
     welcomeBtn.classList.add("menu__button_active");
@@ -74,4 +75,11 @@ contactsBtn.addEventListener("click", ()=>{
 document.addEventListener("DOMContentLoaded", ()=>{
     document.querySelector(".start-page").style.visibility = "visible";
     document.querySelector(".start-page").style.opacity = "1";
+
+    
+   
+})
+
+start_pageBtn.addEventListener("click", ()=>{
+    document.querySelector(".links").classList.toggle("links_appear");
 })
