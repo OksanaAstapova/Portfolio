@@ -71,16 +71,13 @@ const cardsData = [
     "img": "assets/pict-inspiration/18.jpg",
     "alt": "Mistery nature"},
 
-    {"name": "19",
-    "img": "assets/pict-inspiration/19.jpg",
-    "alt": "Mistery nature"}
 ]
 
 let k;
 let wrapper = document.querySelector(".gallery");
 
 document.addEventListener("DOMContentLoaded", () => {
-    for(let k=0; k<19; k++){
+    for(let k=0; k<18; k++){
         let card = `<div class = "gallery__card" onclick="openModal(${k})">
         <img src="${cardsData[k].img}" alt="${cardsData[k].alt}">
         </div>`;
@@ -120,6 +117,7 @@ function closeModal(){
     modal.innerHTML = "";
     blackBack.style.display = "none";
     modal.style.visibility = "hidden";
+    modal.style.opacity - "0";
     body.style.overflow = "visible";
     
 }

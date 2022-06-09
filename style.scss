@@ -29,69 +29,75 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     border-radius: $property;
 }
 
-.home-page{
-    @extend %bg-shared;
-    background-image: url(/assets/background/MyPortfolio.jpg);
-}
-
-.other-pages{
+.sections{
     @extend %bg-shared;
     background-image: url(/assets/background/MyPortfolio1.jpg);
+    transition: ease-in-out .8s, opacity ease-in-out .8s;
+    width: 100vw;
+}
+
+.start-page{
+    @extend %bg-shared;
+    background-image: url(/assets/background/MyPortfolio.jpg);
+    height: 100vh;
+
+}
+
+
+.body{
+
+    margin: 0;
+
+    .sections{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 .menu{
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     list-style: none;
-}
 
-.menu__button{
-    width: 24%;
-    height: 10vh;
-    transition: all .1s linear;
-    @include border-radius(10px);
-
-    a{
+    .menu__button{
+        width: 24%;
+        height: 70px;
+        transition: all .1s linear;
+        @include border-radius(10px);
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100%;
         width: 100%;
         text-decoration: none;
         color: #230b25;
         font-family: $font;
         font-size: 2em;
+        user-select: none;
+    }
+    
+    .menu__button:not(.menu__button_active):hover{
+        @extend %hover-shared;
+        transition: .2s;
+    }
+    
+    .menu__button:not(.menu__button_active):active{
+        box-shadow: 0 3px 0 #8c8c8c;
+        transform: translateY(5px);
+    }
+    
+    .menu__button_active{
+        background: #b168e8df;
+        border: 1.5px grey solid;
     }
 }
 
-.menu__button:not(.menu__button_active):hover{
-    @extend %hover-shared;
-}
 
-.menu__button:not(.menu__button_active):active{
-    box-shadow: 0 3px 0 #8c8c8c;
-    transform: translateY(5px);
-}
-
-.menu__button_active{
-    background: #b168e8df;
-    border: 1.5px grey solid;
-    @include border-radius(10px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #230b25;
-    font-family: $font;
-    font-size: 2em;
-    user-select: none;
-
-}
 
 .calendar{
-    margin: 7%;
     @include border-radius(10px);
 }
 
@@ -181,20 +187,25 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     height: 100px;
     font-family: $font;
     border: 2px gray solid;
+    user-select: none;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
 .page__button:not(.page__button_active):hover{
    @extend %hover-shared;
+
 }
 
 .page__button:not(.page__button_active):active{
-    box-shadow: 0 3px 0 #8c8c8c;
-    transform: translateY(5px);
+    box-shadow: 0 4px 0 #8c8c8c;
+    transform: translateY(7px);
+    transition: 0.3s;
 }
 
 .page__button_active{
     background: #b168e8df;
     border: 1.5px grey solid;
+    box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
 
 .page__right-side{
@@ -204,14 +215,19 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 .screen{
     margin: 0%;
     position: absolute;
-    display: none;
-    border: 2px rgb(8, 8, 8) solid;
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    flex-direction: column;
     background-color: lightgreen;
+    box-shadow: 1em 1em 1em rgba(60, 59, 59, 0.516);
     @include border-radius(10px);
+    transition: ease-in-out .8s, opacity ease-in-out .8s;
+    transform: scale(0.9);
 }
 .screen_active{
-    display: flex;
-    flex-direction: column;
+    visibility: visible; 
+    opacity: 1;    
 }
 
 .screen__screenshot{
@@ -242,6 +258,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     button:active{
         box-shadow: 0 3px 0 #8c8c8c;
         transform: translateY(5px);
+        transition: 0.3s;
     }
 }
 
@@ -273,8 +290,8 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 }
 
 .gallery__card:hover{
-    transform: rotate(-5deg) scale(1.1);
-    transition: .5s;
+    transform: rotate(-2deg) scale(1.1);
+    transition: 1s;
     z-index: 1;
     cursor: pointer;
 }

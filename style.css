@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.box-wrapper, .other-pages, .home-page {
+.box-wrapper, .start-page, .sections {
   background-color: rgba(201, 198, 204, 0.831372549);
   background-position: center;
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   margin: 0%;
 }
 
-.box-wrapper .call-you #form-contact .contact-form__button:hover, .box-wrapper .call-me .call-me__button:hover, .screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu__button:not(.menu__button_active):hover {
+.box-wrapper .call-you #form-contact .contact-form__button:hover, .box-wrapper .call-me .call-me__button:hover, .screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu .menu__button:not(.menu__button_active):hover {
   cursor: pointer;
   background-color: #e5e3e3;
   opacity: 1;
@@ -18,69 +18,66 @@
   background-size: 4px 4px;
 }
 
-.home-page {
-  background-image: url(/assets/background/MyPortfolio.jpg);
+.sections {
+  background-image: url(/assets/background/MyPortfolio1.jpg);
+  transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
+  width: 100vw;
 }
 
-.other-pages {
-  background-image: url(/assets/background/MyPortfolio1.jpg);
+.start-page {
+  background-image: url(/assets/background/MyPortfolio.jpg);
+  height: 100vh;
+}
+
+.body {
+  margin: 0;
+}
+.body .sections {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .menu {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 0;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
-
-.menu__button {
+.menu .menu__button {
   width: 24%;
-  height: 10vh;
+  height: 70px;
   transition: all 0.1s linear;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-}
-.menu__button a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   width: 100%;
   text-decoration: none;
   color: #230b25;
   font-family: "Poppins", Verdana, Arial, sans-serif;
   font-size: 2em;
+  user-select: none;
 }
-
-.menu__button:not(.menu__button_active):active {
+.menu .menu__button:not(.menu__button_active):hover {
+  transition: 0.2s;
+}
+.menu .menu__button:not(.menu__button_active):active {
   box-shadow: 0 3px 0 #8c8c8c;
   transform: translateY(5px);
 }
-
-.menu__button_active {
+.menu .menu__button_active {
   background: rgba(177, 104, 232, 0.8745098039);
   border: 1.5px grey solid;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #230b25;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
-  font-size: 2em;
-  user-select: none;
 }
 
 .calendar {
-  margin: 7%;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -182,16 +179,20 @@
   height: 100px;
   font-family: "Poppins", Verdana, Arial, sans-serif;
   border: 2px gray solid;
+  user-select: none;
+  box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
 .page__button:not(.page__button_active):active {
-  box-shadow: 0 3px 0 #8c8c8c;
-  transform: translateY(5px);
+  box-shadow: 0 4px 0 #8c8c8c;
+  transform: translateY(7px);
+  transition: 0.3s;
 }
 
 .page__button_active {
   background: rgba(177, 104, 232, 0.8745098039);
   border: 1.5px grey solid;
+  box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
 
 .page__right-side {
@@ -201,19 +202,24 @@
 .screen {
   margin: 0%;
   position: absolute;
-  display: none;
-  border: 2px rgb(8, 8, 8) solid;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
   background-color: lightgreen;
+  box-shadow: 1em 1em 1em rgba(60, 59, 59, 0.516);
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
+  transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
+  transform: scale(0.9);
 }
 
 .screen_active {
-  display: flex;
-  flex-direction: column;
+  visibility: visible;
+  opacity: 1;
 }
 
 .screen__screenshot {
@@ -243,6 +249,7 @@
 .screen__figcaption button:active {
   box-shadow: 0 3px 0 #8c8c8c;
   transform: translateY(5px);
+  transition: 0.3s;
 }
 
 /*------------inspiration-----------*/
@@ -274,8 +281,8 @@
 }
 
 .gallery__card:hover {
-  transform: rotate(-5deg) scale(1.1);
-  transition: 0.5s;
+  transform: rotate(-2deg) scale(1.1);
+  transition: 1s;
   z-index: 1;
   cursor: pointer;
 }

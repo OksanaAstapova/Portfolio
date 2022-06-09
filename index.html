@@ -11,40 +11,162 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/assets/icons/logo.png">
   </head>
-  <body class="home-page">
-    <header>
+  <body class="body">
+    <header class="head">
       <nav>
         <ul class="menu">
-          <li class="menu__button menu__button_active">Welcome</li>
-          <li class="menu__button"><a href="projects.html">Projects</a></li>
-          <li class="menu__button"><a href="inspiration.html">Inspiration</a></li> 
-          <li class="menu__button"><a href="contacts.html">Contacts</a></li>
+          <li class="menu__button menu__button_welcome menu__button_active">Welcome</li>
+          <li class="menu__button menu__button_projects">Projects</li>
+          <li class="menu__button menu__button_inspiration">Inspiration</li> 
+          <li class="menu__button menu__button_contacts">Contacts</li>
         </ul>
       </nav>
     </header>
-    <section class="calendar">
-      <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23b168e8&amp;ctz=Europe%2F&amp;src=ZGVyYWluMTIwNUBnbWFpbC5jb20&amp;color=%23039BE5&amp;showTitle=0&amp;showPrint=0&amp;showNav=1&amp;hl=en_GB"
-        style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no">
-      </iframe>
+    <section class="sections start-page">
+      <div class="calendar">
+        <iframe src="https://calendar.google.com/calendar/embed?height=300&amp;wkst=1&amp;bgcolor=%23b168e8&amp;ctz=Europe%2F&amp;src=ZGVyYWluMTIwNUBnbWFpbC5jb20&amp;color=%23039BE5&amp;showTitle=0&amp;showPrint=0&amp;showNav=1&amp;hl=en_GB"
+          style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no">
+        </iframe>
+      </div>
+      <div class="info">
+        <p>Hello! I am Oksana Astapova.<br> I am web designer and Front-end developer from Belarus.</p>
+        <form action="projects.html">   
+          <button class="info__button">Projects</button>
+        </form>
+      </div>
+      <aside class="links">
+        <a href="mailto:pitjay@bk.ru" target="_blank">
+          <img class="links__img" src="/assets/icons/mail.png" alt="Mail">
+        </a>
+        <a href="https://www.instagram.com/pitjayka/" target="_blank">
+          <img class="links__img" src="/assets/icons/instagram.png" alt="Mail">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100070158298028" target="_blank">
+          <img class="links__img" src="/assets/icons/facebook.png" alt="Mail">
+        </a>
+      </aside>
     </section>
-    <section class="info">
-      <p>Hello! I am Oksana Astapova.<br> I am web designer and Front-end developer from Belarus.</p>
-      <form action="projects.html">   
-        <button class="info__button">Projects</button>
-      </form>
+    <section class="sections projects-page">
+      <main class="page">
+        <div class="page__left-side">
+          <button class="page__button page__button_keyboard page__button_active">
+            Virtual Keyboard
+          </button>
+          <button class="page__button page__button_shelter">
+            Shelter
+          </button>
+          <button class="page__button page__button_mem">
+            CSS-Mem-Slider
+          </button>
+        </div>
+        <div class="page__right-side">
+          <div class="screen-wrapper">
+            <figure class="screen screen_keyboard screen_active">
+                <img class="screen__screenshot" src="/assets/screenshots/virtual-keyboard.png" alt="Virtual Keyboard">
+                <figcaption class="screen__figcaption">
+                  <p>My virtual Keybord on pure JavaScript</p>
+                  <a href="https://oksanaastapova.github.io/virtual--keyboard/" target="_blank">
+                    <button>Go!</button>
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="screen screen_shelter">
+                <img class="screen__screenshot" src="/assets/screenshots/shelter.png" alt="Shelter">
+                <figcaption class="screen__figcaption">
+                  <p>My project shelter for pets</p>
+                  <a href="https://rolling-scopes-school.github.io/oksanaastapova-JSFE2022Q1/shelter/pages/main/" target="_blank">
+                    <button>Go!</button>
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="screen screen_mem">
+                <img class="screen__screenshot" src="/assets/screenshots/css-mem.png" alt="CSS-Mem-Slider">
+                <figcaption class="screen__figcaption">
+                  <p>My Mem-Slider on pure CSS without JavaScript</p>
+                  <a href="https://oksanaastapova.github.io/cssMemSlider/cssMemSlider/" target="_blank">
+                    <button>Go!</button>
+                  </a>
+                </figcaption>
+              </figure>
+            </div>
+        </div>
+      </main>
     </section>
-    <aside class="links">
-      <a href="mailto:pitjay@bk.ru" target="_blank">
-        <img class="links__img" src="/assets/icons/mail.png" alt="Mail">
-      </a>
-      <a href="https://www.instagram.com/pitjayka/" target="_blank">
-        <img class="links__img" src="/assets/icons/instagram.png" alt="Mail">
-      </a>
-      <a href="https://www.facebook.com/profile.php?id=100070158298028" target="_blank">
-        <img class="links__img" src="/assets/icons/facebook.png" alt="Mail">
-      </a>
-    </aside>
+    <section class="sections inspiration-page">
+      <div class="black-back">
+      </div>
+      <div class="modal-card">
+      </div>
+      <main>
+        <div class="gallery">
+        </div>
+      </main>
+    </section>
+    <section class="sections contacts-page">
+      <div class="box-wrapper">
+        <div class="call-me">
+          <h1 class="call-me__heading">Call me!</h1>
+          <a href="tel:+375297425921">
+            <button class="call-me__button">
+              Phone
+            </button>
+          </a>
+          <a href="mailto:pitjay@bk.ru" target="_blank">
+            <button class="call-me__button">
+              Email
+            </button>
+          </a>
+          <a href="https://t.me/pitjay" target="_blank">
+            <button class="call-me__button">
+              Telegram
+            </button>
+          </a>
+          <a href="viber://add?number=+375297425921">
+            <button class="call-me__button">
+              Viber
+            </button>
+          </a>
+          <a href="www.linkedin.com/in/oksana-astapova">
+            <button class="call-me__button">
+              LinkedIn
+            </button>
+          </a>
+        </div>
+        <div class="call-you">
+          <h1 class="call-you__heading">Call you!</h1>
+            <form id="form-contact" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
+             <div class="preloader"></div>
+               <p class="contact-form__message"></p>
+               <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
+                  <input name="name" type="text" class="contact-form__input contact-form__input_name"
+                     placeholder="Name">
+                </div>
+             <div class="contact-form__input-wrapper contact-form__input-wrapper_phone">
+             <input name="phone" type="tel" class="contact-form__input contact-form__input_phone"
+                     placeholder="Phone">
+             </div>
+             <div class="contact-form__input-wrapper">
+                <input type="file" name="files[]" id="contact-form__input_file"
+                     class="contact-form__input contact-form__input_file" multiple>
+                <label for="contact-form__input_file" class="contact-form__file-button">
+                  <span class="contact-form__file-text">
+                    #
+                  </span>
+                </label>
+             </div>
+             <input name="theme" type="hidden" class="contact-form__input contact-form__input_theme"
+                   value="Message from my portfolio">
+             <button type="submit" class="contact-form__button">
+                 Send
+             </button>
+           </form>
+        </div>
+      </div>
+    </section>
     <footer>
     </footer>
+    <script src="/js/main.js"></script>
+    <script src="/js/projects.js"></script>
+    <script src="/js/inspiration.js"></script>
   </body>
 </html>
