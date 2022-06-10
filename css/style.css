@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-.box-wrapper, .sections {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap");
+.box-wrapper, .language .languages, .sections {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,7 +64,7 @@
   width: 100%;
   text-decoration: none;
   color: #230b25;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 2em;
   user-select: none;
 }
@@ -422,12 +422,44 @@
   left: 50%;
 }
 
+.language {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  position: absolute;
+  right: 3vw;
+  top: 5vh;
+}
+.language .languages {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-image: url(/assets/icons/bel-lang.png);
+  border: none;
+  z-index: 3;
+}
+.language .language__eng {
+  background-image: url(/assets/icons/eng-lang.png);
+}
+.language .language__ru {
+  background-image: url(/assets/icons/rus-lang.png);
+}
+.language .language__lt {
+  background-image: url(/assets/icons/lt-lang.jpg);
+}
+.language .languages:hover {
+  cursor: pointer;
+}
+.language .languages:active {
+  transform: translateY(5px);
+}
+
 .girl {
   position: absolute;
   display: flex;
   bottom: 0%;
-  left: calc(50vw - 280px);
-  width: 560px;
+  left: calc(50vw - 325px);
+  width: 650px;
   z-index: 0;
 }
 
@@ -440,11 +472,11 @@
   text-align: center;
   gap: 3vh;
   margin: 0 auto;
-  width: 95%;
+  width: 60vw;
   color: black;
   font-size: 2em;
   line-height: 130%;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   text-shadow: 0px 1px 1px #8c8c8c;
   user-select: none;
   z-index: 1;
@@ -454,8 +486,8 @@
 }
 
 .info__button {
-  font-family: "Poppins", Verdana, Arial, sans-serif;
-  font-size: 0.5em;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.8em;
   width: 10vw;
   height: 5vh;
   box-shadow: 1px 5px 2px #8c8c8c;
@@ -466,7 +498,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   z-index: 1;
 }
 
@@ -491,7 +523,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background-image: url(/assets/background/contact-buttons.png);
+  background: rgba(177, 104, 232, 0.8745098039);
   width: 80px;
   text-align: center;
   box-shadow: -1px 5px 2px #8c8c8c;
@@ -531,7 +563,7 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   border: 2px gray solid;
   user-select: none;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
@@ -584,7 +616,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.2em;
 }
 .screen__figcaption button {
@@ -597,7 +629,7 @@
   background-color: rgba(177, 104, 232, 0.8745098039);
   height: 50px;
   width: 50px;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.1em;
 }
 .screen__figcaption button:active {
@@ -727,7 +759,7 @@
 }
 .box-wrapper .call-me .call-me__heading {
   font-size: 1.7em;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   color: white;
   text-align: center;
   font-weight: lighter;
@@ -738,7 +770,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1.5em;
   height: 100%;
   width: 200px;
@@ -760,7 +792,7 @@
 }
 .box-wrapper .call-you .call-you__heading {
   font-size: 1.7em;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   color: rgb(8, 8, 8);
   text-align: center;
   font-weight: lighter;
@@ -781,7 +813,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  font-family: "Poppins", Verdana, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 1em;
   height: 100%;
   width: 200px;

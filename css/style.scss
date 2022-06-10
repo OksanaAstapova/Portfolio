@@ -1,9 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-$font: 'Poppins', Verdana, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+$font: 'Montserrat', Arial, sans-serif;
 
 %bg-shared {
-    // background-color: #c9c6ccd4;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -101,12 +99,51 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 
 @import 'clock';
 
+.language{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    position: absolute;
+    right: 3vw;
+    top: 5vh;
+
+    .languages{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-image: url(/assets/icons/bel-lang.png);
+        @extend %bg-shared;
+        border: none;
+        z-index: 3;
+    
+    }
+    .language__eng{
+        background-image: url(/assets/icons/eng-lang.png);
+    }
+
+    .language__ru{
+        background-image: url(/assets/icons/rus-lang.png);
+    }
+
+    .language__lt{
+        background-image: url(/assets/icons/lt-lang.jpg);
+    }
+
+    .languages:hover{
+        cursor: pointer;
+    }
+
+    .languages:active{
+        transform: translateY(5px);
+    }
+}
+
 .girl{
     position: absolute;
     display: flex;
     bottom: 0%;
-    left: calc(50vw - 560px/2);
-    width: 560px;
+    left: calc(50vw - 650px/2);
+    width: 650px;
     z-index: 0;
 }
 
@@ -119,7 +156,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     text-align: center;
     gap: 3vh;
     margin: 0 auto;
-    width: 95%;
+    width: 60vw;
     color: black;
     font-size: 2em;
     line-height: 130%;
@@ -127,6 +164,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     text-shadow: 0px 1px 1px #8c8c8c;
     user-select: none;
     z-index: 1;
+    
 
       p{
           margin: 0%;
@@ -135,14 +173,14 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
 
 .info__button{
     font-family: $font;
-    font-size: 0.5em;
+    font-size: 0.8em;
     width: 10vw;
     height: 5vh;
     box-shadow: 1px 5px 2px #8c8c8c;
     cursor: pointer;
     transition: all .1s linear;
     @include border-radius(10px);
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     z-index: 1;
   
 }
@@ -165,7 +203,7 @@ $font: 'Poppins', Verdana, Arial, sans-serif;
     bottom: 0;
     border: 1.5px rgb(17, 17, 17) solid;
     @include border-radius(10px);
-    background-image: url(/assets/background/contact-buttons.png);
+    background: #b168e8df;
     width: 80px;
     text-align: center;
     box-shadow: -1px 5px 2px #8c8c8c;
