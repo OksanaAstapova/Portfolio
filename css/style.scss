@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
-$font: 'Montserrat', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+$font: 'Poppins', 'Montserrat', Arial, sans-serif;
+
+$bg-purple: #b168e8;
 
 %bg-shared {
     background-position: center;
@@ -31,6 +33,7 @@ $font: 'Montserrat', Arial, sans-serif;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     width: 100vw;
     height: calc(100vh - 74px);
+    min-height: 100vh;
     
 }
 
@@ -56,6 +59,21 @@ $font: 'Montserrat', Arial, sans-serif;
         opacity: 0;
     }
 }
+.menu-mobile{
+ 
+    width: 100vw;
+    height: 70px;
+    font-size: 2em;
+    user-select: none;
+    background-color: $bg-purple;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-family: $font;
+    display: none;
+    @include border-radius(10px);
+}
 
 .menu{
     display: flex;
@@ -64,6 +82,7 @@ $font: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
     list-style: none;
+    
 
     .menu__button{
         width: 24%;
@@ -92,7 +111,7 @@ $font: 'Montserrat', Arial, sans-serif;
     }
     
     .menu__button_active{
-        background: #b168e8df;
+        background: $bg-purple;
         border: 1.5px grey solid;
     }
 }
@@ -192,7 +211,7 @@ $font: 'Montserrat', Arial, sans-serif;
 }
   
 .info__button:hover{
-    background: #b168e8df;  
+    background: $bg-purple;  
 }
   
 .links{
@@ -203,7 +222,8 @@ $font: 'Montserrat', Arial, sans-serif;
     bottom: 0;
     border: 1.5px rgb(17, 17, 17) solid;
     @include border-radius(10px);
-    background: #b168e8df;
+    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+    background-size: 4px 4px;
     width: 80px;
     text-align: center;
     box-shadow: -1px 5px 2px #8c8c8c;
@@ -258,7 +278,7 @@ $font: 'Montserrat', Arial, sans-serif;
 }
 
 .page__button_active{
-    background: #b168e8df;
+    background: $bg-purple;
     border: 1.5px grey solid;
     box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
@@ -298,8 +318,8 @@ $font: 'Montserrat', Arial, sans-serif;
 
     button{
         @include border-radius(50%);
-        border: 1.5px #b168e8df solid;
-        background-color: #b168e8df;
+        border: 1.5px $bg-purple solid;
+        background-color: $bg-purple;
         height: 50px;
         width: 50px;
         font-family: $font;
@@ -355,6 +375,25 @@ $font: 'Montserrat', Arial, sans-serif;
     transform: none;
 
 }
+@keyframes appearModal{
+
+    from{
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    to{
+        visibility: visible;
+        opacity: 1;
+    }
+
+}
+
+.animation-modal{
+    animation-name: appearModal;
+    animation-duration: 1s;
+    
+}
 
 .modal-card{
     display: flex;
@@ -366,7 +405,8 @@ $font: 'Montserrat', Arial, sans-serif;
     z-index: 999;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 1s linear,opacity 1s linear;
+   
+    // transition: visibility 1s linear,opacity 1s linear;
     
 
 
@@ -405,6 +445,7 @@ $font: 'Montserrat', Arial, sans-serif;
             height: 100%;
             object-fit: cover;
             @include border-radius(10px);
+            
         }   
     }
 }
@@ -507,7 +548,7 @@ $font: 'Montserrat', Arial, sans-serif;
             }
 
             .contact-form__button{
-                background-color: #b168e8;
+                background-color: $bg-purple;
                 font-size: 1.5em;
             }
 
@@ -523,5 +564,66 @@ $font: 'Montserrat', Arial, sans-serif;
 
             
         }
+    }
+}
+
+@media (max-width:767.9px){
+    
+    .body{
+
+        overflow-y: hidden; 
+   }
+
+    .menu-mobile{
+        
+        display: flex;
+    }
+        
+    .menu{
+        transition: 1s;
+        position: absolute;
+        top: -350px;
+        z-index: 5;
+        flex-direction: column;
+        background: lightgreen;
+        @include border-radius(10px);
+            
+    }
+    
+    .menu-appear{
+
+        top: 70px;
+    }
+
+    .menu-mobile_color{
+
+        background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+        background-size: 4px 4px;
+
+    }
+    
+    .girl{
+
+        display: none;
+    }
+
+    .clock{
+        display: none;
+    }
+
+   
+    .info{
+
+        font-size: unset;
+
+        .info__button{
+            display: none;
+        }
+    }
+
+    .links{
+
+        left: 0;
+        right: unset;
     }
 }

@@ -83,3 +83,23 @@ document.addEventListener("DOMContentLoaded", ()=>{
 start_pageBtn.addEventListener("click", ()=>{
     document.querySelector(".links").classList.toggle("links_appear");
 })
+
+/*-------Mobile Menu--------------*/
+
+let menuBtn = document.querySelector(".menu-mobile");
+let menu = document.querySelector(".menu");
+
+menuBtn.addEventListener("click", ()=>{
+
+    menuBtn.classList.toggle("menu-mobile_color");
+    menu.classList.toggle("menu-appear");
+})
+
+document.querySelectorAll("li").forEach(k => {
+
+    k.addEventListener("click", ()=>{
+
+    menu.classList.remove("menu-appear");
+    })
+})
+

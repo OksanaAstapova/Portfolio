@@ -101,6 +101,8 @@ function openModal(k){
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
     body.style.overflow = "hidden";
+        modal.classList.add('animation-modal');
+
 
     let modalWrapper = `<button class="modal-card__close-btn" onclick="closeModal()">
                 <img src="/assets/icons/close-btn.png" alt="close button">
@@ -108,12 +110,16 @@ function openModal(k){
                         <div class="modal-card__wrapper">
                 <img src="${cardsData[k].img}" alt="${cardsData[k].alt}"> 
                         </div>`;
+                       
 
         modal.innerHTML += modalWrapper;
+        // modal.style.transition = "visibility 1s linear,opacity 1s linear";
+
         
 }
 
 function closeModal(){
+    // modal.style.transition = "";
     modal.innerHTML = "";
     blackBack.style.display = "none";
     modal.style.visibility = "hidden";

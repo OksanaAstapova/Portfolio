@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap");
 .box-wrapper, .language .languages, .sections {
   background-position: center;
   background-repeat: no-repeat;
@@ -20,6 +20,7 @@
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   width: 100vw;
   height: calc(100vh - 74px);
+  min-height: 100vh;
 }
 
 .start-page {
@@ -39,6 +40,25 @@
   position: absolute;
   visibility: hidden;
   opacity: 0;
+}
+
+.menu-mobile {
+  width: 100vw;
+  height: 70px;
+  font-size: 2em;
+  user-select: none;
+  background-color: #b168e8;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
+  display: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .menu {
@@ -64,7 +84,7 @@
   width: 100%;
   text-decoration: none;
   color: #230b25;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 2em;
   user-select: none;
 }
@@ -76,7 +96,7 @@
   transform: translateY(5px);
 }
 .menu .menu__button_active {
-  background: rgba(177, 104, 232, 0.8745098039);
+  background: #b168e8;
   border: 1.5px grey solid;
 }
 
@@ -476,7 +496,7 @@
   color: black;
   font-size: 2em;
   line-height: 130%;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   text-shadow: 0px 1px 1px #8c8c8c;
   user-select: none;
   z-index: 1;
@@ -486,7 +506,7 @@
 }
 
 .info__button {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 0.8em;
   width: 10vw;
   height: 5vh;
@@ -508,7 +528,7 @@
 }
 
 .info__button:hover {
-  background: rgba(177, 104, 232, 0.8745098039);
+  background: #b168e8;
 }
 
 .links {
@@ -523,7 +543,8 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background: rgba(177, 104, 232, 0.8745098039);
+  background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+  background-size: 4px 4px;
   width: 80px;
   text-align: center;
   box-shadow: -1px 5px 2px #8c8c8c;
@@ -563,7 +584,7 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   border: 2px gray solid;
   user-select: none;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
@@ -576,7 +597,7 @@
 }
 
 .page__button_active {
-  background: rgba(177, 104, 232, 0.8745098039);
+  background: #b168e8;
   border: 1.5px grey solid;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset;
 }
@@ -616,7 +637,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1.2em;
 }
 .screen__figcaption button {
@@ -625,11 +646,11 @@
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  border: 1.5px rgba(177, 104, 232, 0.8745098039) solid;
-  background-color: rgba(177, 104, 232, 0.8745098039);
+  border: 1.5px #b168e8 solid;
+  background-color: #b168e8;
   height: 50px;
   width: 50px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1.1em;
 }
 .screen__figcaption button:active {
@@ -677,6 +698,21 @@
   transform: none;
 }
 
+@keyframes appearModal {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.animation-modal {
+  animation-name: appearModal;
+  animation-duration: 1s;
+}
+
 .modal-card {
   display: flex;
   position: absolute;
@@ -687,7 +723,6 @@
   z-index: 999;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 1s linear, opacity 1s linear;
 }
 .modal-card .modal-card__close-btn {
   width: 60px;
@@ -759,7 +794,7 @@
 }
 .box-wrapper .call-me .call-me__heading {
   font-size: 1.7em;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   color: white;
   text-align: center;
   font-weight: lighter;
@@ -770,7 +805,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1.5em;
   height: 100%;
   width: 200px;
@@ -792,7 +827,7 @@
 }
 .box-wrapper .call-you .call-you__heading {
   font-size: 1.7em;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   color: rgb(8, 8, 8);
   text-align: center;
   font-weight: lighter;
@@ -813,7 +848,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1em;
   height: 100%;
   width: 200px;
@@ -830,6 +865,51 @@
 .box-wrapper .call-you #form-contact .contact-form__button:active {
   box-shadow: 0 3px 0 #8c8c8c;
   transform: translateY(5px);
+}
+
+@media (max-width: 767.9px) {
+  .body {
+    overflow-y: hidden;
+  }
+  .menu-mobile {
+    display: flex;
+  }
+  .menu {
+    transition: 1s;
+    position: absolute;
+    top: -350px;
+    z-index: 5;
+    flex-direction: column;
+    background: lightgreen;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+  }
+  .menu-appear {
+    top: 70px;
+  }
+  .menu-mobile_color {
+    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+    background-size: 4px 4px;
+  }
+  .girl {
+    display: none;
+  }
+  .clock {
+    display: none;
+  }
+  .info {
+    font-size: unset;
+  }
+  .info .info__button {
+    display: none;
+  }
+  .links {
+    left: 0;
+    right: unset;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
