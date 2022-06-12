@@ -105,7 +105,7 @@ function openModal(k){
 
 
     let modalWrapper = `<button class="modal-card__close-btn" onclick="closeModal()">
-                <img src="/assets/icons/close-btn.png" alt="close button">
+                <img src="../assets/icons/close-btn.png" alt="close button">
                         </button>
                         <div class="modal-card__wrapper">
                 <img src="${cardsData[k].img}" alt="${cardsData[k].alt}"> 
