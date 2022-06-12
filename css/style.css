@@ -33,7 +33,7 @@
 
 .body {
   margin: 0;
-  background-image: url(/assets/background/MyPortfolio1.jpg);
+  background-image: url(../assets/background/MyPortfolio1.jpg);
 }
 .body .sections {
   position: absolute;
@@ -453,18 +453,18 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-image: url(/assets/icons/bel-lang.png);
+  background-image: url(./assets/icons/bel-lang.png);
   border: none;
   z-index: 3;
 }
 .language .language__eng {
-  background-image: url(/assets/icons/eng-lang.png);
+  background-image: url(../assets/icons/eng-lang.png);
 }
 .language .language__ru {
-  background-image: url(/assets/icons/rus-lang.png);
+  background-image: url(../assets/icons/rus-lang.png);
 }
 .language .language__lt {
-  background-image: url(/assets/icons/lt-lang.jpg);
+  background-image: url(../assets/icons/lt-lang.jpg);
 }
 .language .languages:hover {
   cursor: pointer;
@@ -780,7 +780,7 @@
 }
 
 .box-wrapper {
-  background-image: url(/assets/background/contacts.png);
+  background-image: url(../assets/background/contacts.png);
   width: 945px;
   height: 550px;
   min-height: unset;
@@ -814,7 +814,7 @@
   display: none;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/icons/call-me_cancel.png);
+  background-image: url(../assets/icons/call-me_cancel.png);
   background-color: inherit;
   background-size: cover;
   background-position: center;
@@ -841,7 +841,7 @@
   background-color: white;
 }
 .box-wrapper .call-me .call-me__button:hover {
-  background-image: url(/assets/background/contact-buttons.png);
+  background-image: url(../assets/background/contact-buttons.png);
 }
 .box-wrapper .call-me .call-me__button:active {
   box-shadow: 0 3px 0 #8c8c8c;
@@ -874,7 +874,7 @@
   display: none;
   width: 50px;
   height: 50px;
-  background-image: url(/assets/icons/call-you_cancel.png);
+  background-image: url(../assets/icons/call-you_cancel.png);
   background-color: inherit;
   background-size: cover;
   background-position: center;
@@ -904,7 +904,7 @@
   font-size: 1.5em;
 }
 .box-wrapper .call-you #form-contact .contact-form__button:hover {
-  background-image: url(/assets/background/contact-buttons.png);
+  background-image: url(../assets/background/contact-buttons.png);
 }
 .box-wrapper .call-you #form-contact .contact-form__button:active {
   box-shadow: 0 3px 0 #8c8c8c;
@@ -941,7 +941,7 @@
   }
   .box-wrapper .call-you .call-you__btn {
     display: flex;
-    background-image: url(/assets/icons/call-you.png);
+    background-image: url(../assets/icons/call-you.png);
     justify-content: center;
     align-items: center;
     height: 260px;
@@ -1003,7 +1003,7 @@
     align-items: center;
     height: 260px;
     width: 260px;
-    background-image: url(/assets/icons/call-me.png);
+    background-image: url(../assets/icons/call-me.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
