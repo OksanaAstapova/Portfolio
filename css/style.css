@@ -6,7 +6,7 @@
   margin: 0%;
 }
 
-.box-wrapper .call-you #form-contact .contact-form__button:hover, .box-wrapper .call-me .call-me__button:hover, .screen__figcaption button:hover, .page__button:not(.page__button_active):hover, .menu .menu__button:not(.menu__button_active):hover {
+.box-wrapper .call-you #form-contact .contact-form__button:hover, .box-wrapper .call-me .call-me__button:hover, .page__right-side .screen__figcaption button:hover, .page__left-side .page__button:not(.page__button_active):hover, .menu .menu__button:not(.menu__button_active):hover {
   cursor: pointer;
   background-color: #e5e3e3;
   opacity: 1;
@@ -567,6 +567,7 @@
   width: 90vw;
   gap: 10%;
   margin-left: 10%;
+  margin-top: 8vh;
 }
 
 .page__left-side {
@@ -575,8 +576,10 @@
   gap: 10vh;
   margin-top: 10vh;
 }
-
-.page__button {
+.page__left-side .page__go-project {
+  display: none;
+}
+.page__left-side .page__button {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -589,14 +592,12 @@
   user-select: none;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
 }
-
-.page__button:not(.page__button_active):active {
+.page__left-side .page__button:not(.page__button_active):active {
   box-shadow: 0 4px 0 #8c8c8c;
   transform: translateY(7px);
   transition: 0.3s;
 }
-
-.page__button_active {
+.page__left-side .page__button_active {
   background: #b168e8;
   border: 1.5px grey solid;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2) inset;
@@ -605,8 +606,7 @@
 .page__right-side {
   margin-top: 10vh;
 }
-
-.screen {
+.page__right-side .screen {
   margin: 0%;
   position: absolute;
   display: flex;
@@ -623,24 +623,21 @@
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   transform: scale(0.9);
 }
-
-.screen_active {
+.page__right-side .screen_active {
   visibility: visible;
   opacity: 1;
 }
-
-.screen__screenshot {
+.page__right-side .screen__screenshot {
   width: 60vw;
 }
-
-.screen__figcaption {
+.page__right-side .screen__figcaption {
   display: flex;
   justify-content: space-around;
   align-items: center;
   font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1.2em;
 }
-.screen__figcaption button {
+.page__right-side .screen__figcaption button {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -653,7 +650,7 @@
   font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1.1em;
 }
-.screen__figcaption button:active {
+.page__right-side .screen__figcaption button:active {
   box-shadow: 0 3px 0 #8c8c8c;
   transform: translateY(5px);
   transition: 0.3s;
@@ -880,28 +877,22 @@
     top: -350px;
     z-index: 5;
     flex-direction: column;
-    background: lightgreen;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     border-radius: 10px;
+    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
+    background-size: 4px 4px;
   }
   .menu-appear {
     top: 70px;
   }
   .menu-mobile_color {
-    background-image: linear-gradient(0deg, #e5e3e3 50%, #a8a8a8 50%);
-    background-size: 4px 4px;
-  }
-  .girl {
-    display: none;
+    background: lightgreen;
   }
   .clock {
     display: none;
-  }
-  .info {
-    font-size: unset;
   }
   .info .info__button {
     display: none;
@@ -909,6 +900,47 @@
   .links {
     left: 0;
     right: unset;
+  }
+  /*------PROJECTS---------*/
+  .page {
+    margin: 0 auto;
+    margin-top: 7vh;
+  }
+  .page .page__left-side {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .page .page__left-side .page__go-project {
+    display: flex;
+    justify-content: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    border: 1px black solid;
+    user-select: none;
+    text-decoration: none;
+    background-color: lightgreen;
+  }
+  .page .page__left-side .page__go-project button {
+    border: none;
+    background-color: unset;
+    font-family: "Poppins", "Montserrat", Arial, sans-serif;
+    font-size: 1.2em;
+  }
+  .page .page__left-side .page__go-project:active {
+    box-shadow: 0 3px 0 #8c8c8c;
+    transform: translateY(5px);
+  }
+  .page .page__left-side .page__button {
+    display: none;
+  }
+  .page .page__right-side {
+    display: none;
   }
 }
 

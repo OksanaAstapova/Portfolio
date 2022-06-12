@@ -100,6 +100,7 @@ document.querySelectorAll("li").forEach(k => {
     k.addEventListener("click", ()=>{
 
     menu.classList.remove("menu-appear");
+    menuBtn.classList.remove("menu-mobile_color");
     })
 })
 

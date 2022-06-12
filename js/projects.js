@@ -34,3 +34,4 @@ mem.addEventListener('click', () => {
     screenShelter.classList.remove('screen_active');
     screenShelter.classList.remove('screen_active');
 })
+
