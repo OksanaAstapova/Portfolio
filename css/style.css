@@ -793,6 +793,16 @@
   justify-content: center;
   gap: 20px;
 }
+.box-wrapper .call-me .call-me__cancel {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/icons/call-me_cancel.png);
+  background-color: inherit;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
 .box-wrapper .call-me .call-me__heading {
   font-size: 1.7em;
   font-family: "Poppins", "Montserrat", Arial, sans-serif;
@@ -833,11 +843,25 @@
   text-align: center;
   font-weight: lighter;
 }
+.box-wrapper .call-you .contact_button {
+  display: none;
+}
 .box-wrapper .call-you #form-contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
+}
+.box-wrapper .call-you #form-contact .call-you__cancel {
+  display: none;
+  width: 50px;
+  height: 50px;
+  background-image: url(/assets/icons/call-you_cancel.png);
+  background-color: inherit;
+  background-size: cover;
+  background-position: center;
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
 .box-wrapper .call-you #form-contact .contact-form__input_file {
   border-style: none;
@@ -851,8 +875,8 @@
   border-radius: 10px;
   font-family: "Poppins", "Montserrat", Arial, sans-serif;
   font-size: 1em;
-  height: 100%;
   width: 200px;
+  height: 40px;
   border: 1px rgb(8, 8, 8) solid;
   background-color: white;
 }
@@ -963,6 +987,114 @@
   }
   .inspiration-page__button {
     display: flex;
+  }
+  /*----------CONTACTS---------*/
+  .preloader,
+.contact-form__message {
+    display: none;
+  }
+  .box-wrapper {
+    background-image: none;
+    flex-direction: column;
+    width: unset;
+    height: unset;
+    margin-top: 10vh;
+  }
+  .box-wrapper .call-you .call-you__heading {
+    display: none;
+  }
+  .box-wrapper .call-you .call-you__btn {
+    display: flex;
+    background-image: url(/assets/icons/call-you.png);
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+  }
+  .box-wrapper .call-you .call-you__btn p {
+    font-family: "Poppins", "Montserrat", Arial, sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+  }
+  .box-wrapper .call-you .contact-form {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: visibility 0.7s linear, opacity 0.7s linear;
+    background-color: lightgreen;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    height: 65vh;
+    width: 85vw;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: -30vh;
+    border: 1px black solid;
+  }
+  .box-wrapper .call-you .contact-form .call-you__cancel {
+    display: flex;
+  }
+  .box-wrapper .call-you .contact-form .call-you__cancel:active {
+    transform: scale(0.8);
+  }
+  .box-wrapper .call-me {
+    align-items: center;
+  }
+  .box-wrapper .call-me .call-me__cancel {
+    display: flex;
+  }
+  .box-wrapper .call-me .call-me__cancel:active {
+    transform: scale(0.8);
+  }
+  .box-wrapper .call-me .call-me__heading {
+    display: none;
+  }
+  .box-wrapper .call-me .call-me__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-image: url(/assets/icons/call-me.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0%;
+  }
+  .box-wrapper .call-me .call-me__btn p {
+    font-family: "Poppins", "Montserrat", Arial, sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+  }
+  .box-wrapper .call-me .call-me__content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    transition: visibility 0.7s linear, opacity 0.7s linear;
+    display: flex;
+    background-color: #b168e8;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    height: 65vh;
+    width: 85vw;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 30vh;
   }
 }
 

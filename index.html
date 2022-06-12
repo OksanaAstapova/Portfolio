@@ -187,35 +187,41 @@
       <div class="box-wrapper">
         <div class="call-me">
           <h1 class="call-me__heading">Call me!</h1>
-          <a href="tel:+375297425921">
-            <button class="call-me__button">
-              Phone
-            </button>
-          </a>
-          <a href="mailto:pitjay@bk.ru" target="_blank">
-            <button class="call-me__button">
-              Email
-            </button>
-          </a>
-          <a href="https://t.me/pitjay" target="_blank">
-            <button class="call-me__button">
-              Telegram
-            </button>
-          </a>
-          <a href="viber://add?number=+375297425921">
-            <button class="call-me__button">
-              Viber
-            </button>
-          </a>
-          <a href="www.linkedin.com/in/oksana-astapova">
-            <button class="call-me__button">
-              LinkedIn
-            </button>
-          </a>
+          <div class="contact_button call-me__btn"><p>Call me</p></div>
+          <div class="call-me__content">
+            <div class="call-me__cancel"></div>
+            <a href="tel:+375297425921">
+              <button class="call-me__button">
+                Phone
+              </button>
+            </a>
+            <a href="mailto:pitjay@bk.ru" target="_blank">
+              <button class="call-me__button">
+                Email
+              </button>
+            </a>
+            <a href="https://t.me/pitjay" target="_blank">
+              <button class="call-me__button">
+                Telegram
+              </button>
+            </a>
+            <a href="viber://add?number=+375297425921">
+              <button class="call-me__button">
+                Viber
+              </button>
+            </a>
+            <a href="www.linkedin.com/in/oksana-astapova">
+              <button class="call-me__button">
+                LinkedIn
+              </button>
+            </a>
+          </div>
         </div>
         <div class="call-you">
-          <h1 class="call-you__heading">Call you!</h1>
+            <h1 class="call-you__heading">Call you!</h1>
+            <div class="contact_button call-you__btn"><p>Call you</p></div>
             <form id="form-contact" method="POST" class="contact-form" autocomplete="off" enctype="multipart/form-data">
+            <div class="call-you__cancel"></div>
              <div class="preloader"></div>
                <p class="contact-form__message"></p>
                <div class="contact-form__input-wrapper contact-form__input-wrapper_name">
@@ -251,5 +257,6 @@
     <script src="/js/clock.js"></script>
     <script src="/js/projects.js"></script>
     <script src="/js/inspiration.js"></script>
+    <script src="/js/contacts.js"></script>
   </body>
 </html>
