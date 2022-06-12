@@ -477,6 +477,11 @@ $bg-purple: #b168e8;
 
 /*----------CONTACTS--------------*/
 
+    .preloader,
+    .contact-form__message{
+        display: none;
+    }
+
 .box-wrapper{
     background-image: url(/assets/background/contacts.png);
     @extend %bg-shared;
@@ -495,6 +500,17 @@ $bg-purple: #b168e8;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
+        margin-top: 10px;
+
+        .call-me__btn{
+            display: none;
+        }
+
+        .call-me__content{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
         .call-me__cancel{
             display: none;
@@ -543,6 +559,7 @@ $bg-purple: #b168e8;
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        gap: 35px;
         
         .call-you__heading{
             font-size: 1.7em;
@@ -581,11 +598,12 @@ $bg-purple: #b168e8;
             .contact-form__button{
                 @include border-radius(10px);
                 font-family: $font;
-                font-size: 1em;
+                font-size: 1.3em;
                 width: 200px;
                 height: 40px;
                 border: 1px rgb(8, 8, 8) solid;
                 background-color: white;
+                text-align: center;
             }
 
             .contact-form__button{
@@ -657,7 +675,7 @@ $bg-purple: #b168e8;
     .info{
 
         font-size: 1.3em;
-        margin-top: 15vh;
+        margin-top: 14vh;
         margin-left: 5vw;
         justify-content: flex-start;
 
@@ -684,13 +702,14 @@ $bg-purple: #b168e8;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
+        gap: 4vh;
 
          .page__go-project{
             display: flex;
             justify-content: center;
-            @include border-radius(10px);
-            width: 100px;
-            height: 100px;
+            @include border-radius(50%);
+            width: 150px;
+            height: 150px;
             border: 1px black solid;
             user-select: none;
             text-decoration: none;
@@ -734,17 +753,14 @@ $bg-purple: #b168e8;
     }
 
     /*----------CONTACTS---------*/
-    .preloader,
-    .contact-form__message{
-        display: none;
-    }
+    
     .box-wrapper{
 
         background-image: none;
         flex-direction: column;
         width: unset;
         height: unset;
-        margin-top: 10vh;
+        margin-top: 6vh;
 
        .call-you{
 
@@ -757,8 +773,8 @@ $bg-purple: #b168e8;
                 background-image: url(/assets/icons/call-you.png);
                 justify-content: center;
                 align-items: center;
-                height: 200px;
-                width: 200px;
+                height: 260px;
+                width: 260px;
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
@@ -768,6 +784,7 @@ $bg-purple: #b168e8;
                     font-family: $font;
                     font-size: 1.6em;   
                     text-align: center;
+                    width: 70%;
                 }
             }
            
@@ -779,13 +796,13 @@ $bg-purple: #b168e8;
                 transition: visibility 0.7s linear,opacity 0.7s linear;
                 background-color: lightgreen;
                 @include border-radius(10px);
-                height: 65vh;
+                height: 75vh;
                 width: 85vw;
-                gap: 20px;
+                gap: 50px;
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                margin-top: -30vh;
+                margin-top: -37vh;
                 border: 1px black solid;
 
                 .call-you__cancel{
@@ -820,8 +837,8 @@ $bg-purple: #b168e8;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 200px;
-                width: 200px;
+                height: 260px;
+                width: 260px;
                 background-image: url(/assets/icons/call-me.png);
                 background-position: center;
                 background-repeat: no-repeat;
@@ -833,6 +850,7 @@ $bg-purple: #b168e8;
                     font-family: $font;
                     font-size: 1.6em;   
                     text-align: center;
+                    width: 70%;
                 }
 
             }
@@ -845,17 +863,15 @@ $bg-purple: #b168e8;
                 background-color: $bg-purple;
                  @include border-radius(10px);
                  flex-direction: column;
-                height: 65vh;
+                height: 75vh;
                 width: 85vw;
-                gap: 20px;
+                gap: 30px;
                 justify-content: center;
                 align-items: center;
                 align-content: center;
-                margin-top: 30vh;
-
-                
-}
-       }
+                margin-top: 40vh;
+            }
+        }
         
 
     }
