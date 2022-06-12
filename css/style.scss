@@ -130,18 +130,18 @@ $bg-purple: #b168e8;
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background-image: url(./assets/icons/bel-lang.png);
+        background-image: url(../assets/icons/bel-lang.png);
         @extend %bg-shared;
         border: none;
         z-index: 3;
     
     }
     .language__eng{
-        background-image: url(../../assets/icons/eng-lang.png);
+        background-image: url(../assets/icons/eng-lang.png);
     }
 
     .language__ru{
-        background-image: url(assets/icons/rus-lang.png);
+        background-image: url(../assets/icons/rus-lang.png);
     }
 
     .language__lt{
