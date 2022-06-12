@@ -20,7 +20,6 @@
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   width: 100vw;
   height: calc(100vh - 74px);
-  min-height: 100vh;
 }
 
 .start-page {
@@ -757,13 +756,18 @@
 }
 
 .black-back {
-  display: none;
+  visibility: hidden;
   width: 100vw;
   height: 100vh;
   position: absolute;
   background-color: rgba(0, 0, 0, 0.8666666667);
   z-index: 2;
   margin: 0px;
+}
+
+.inspiration-page__button {
+  display: none;
+  position: fixed;
 }
 
 /*----------CONTACTS--------------*/
@@ -891,8 +895,18 @@
   .menu-mobile_color {
     background: lightgreen;
   }
+  .girl {
+    width: 300px;
+    left: calc(50vw - 120px);
+  }
   .clock {
     display: none;
+  }
+  .info {
+    font-size: 1.3em;
+    margin-top: 15vh;
+    margin-left: 5vw;
+    justify-content: flex-start;
   }
   .info .info__button {
     display: none;
@@ -941,6 +955,14 @@
   }
   .page .page__right-side {
     display: none;
+  }
+  /*------------INSPIRATION------------*/
+  .black-back,
+.modal-card {
+    display: none;
+  }
+  .inspiration-page__button {
+    display: flex;
   }
 }
 

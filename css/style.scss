@@ -33,7 +33,7 @@ $bg-purple: #b168e8;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     width: 100vw;
     height: calc(100vh - 74px);
-    min-height: 100vh;
+    // min-height: 100vh;
     
 }
 
@@ -459,7 +459,7 @@ $bg-purple: #b168e8;
 }
 
 .black-back{
-    display: none;
+    visibility: hidden; 
     width: 100vw;
     height: 100vh;
     position: absolute;
@@ -468,6 +468,11 @@ $bg-purple: #b168e8;
     margin: 0px;
 }
 
+.inspiration-page__button{
+    display: none;
+    position: fixed;
+    // right: 0;
+}
 
 
 /*----------CONTACTS--------------*/
@@ -612,7 +617,8 @@ $bg-purple: #b168e8;
     
     .girl{
 
-        // display: none;
+    width: 300px;
+    left: calc(50vw - 120px);;
     }
 
     .clock{
@@ -622,7 +628,10 @@ $bg-purple: #b168e8;
    
     .info{
 
-        // font-size: unset;
+        font-size: 1.3em;
+        margin-top: 15vh;
+        margin-left: 5vw;
+        justify-content: flex-start;
 
         .info__button{
             display: none;
@@ -684,6 +693,16 @@ $bg-purple: #b168e8;
              display: none;
              
         }  
+    }
+
+    /*------------INSPIRATION------------*/
+    .black-back,
+    .modal-card{
+        display: none;
+    }
+
+    .inspiration-page__button{
+        display: flex;
     }
     
 }
