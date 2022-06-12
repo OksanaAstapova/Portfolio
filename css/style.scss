@@ -51,7 +51,7 @@ $bg-purple: #b168e8;
 .body{
 
     margin: 0;
-    background-image: url(assets/background/MyPortfolio1.jpg);
+    background-image: url(../assets/background/MyPortfolio1.jpg);
 
     .sections{
         position: absolute;
@@ -486,7 +486,7 @@ $bg-purple: #b168e8;
     }
 
 .box-wrapper{
-    background-image: url(/assets/background/contacts.png);
+    background-image: url(../assets/background/contacts.png);
     @extend %bg-shared;
     width: 945px;
     height: 550px;
@@ -519,7 +519,7 @@ $bg-purple: #b168e8;
             display: none;
             width: 50px;
             height: 50px;
-            background-image: url(/assets/icons/call-me_cancel.png);
+            background-image: url(../assets/icons/call-me_cancel.png);
             background-color: inherit;
             background-size: cover;
             background-position: center;
@@ -547,7 +547,7 @@ $bg-purple: #b168e8;
 
         .call-me__button:hover{
             @extend %hover-shared;
-            background-image: url(/assets/background/contact-buttons.png);
+            background-image: url(../assets/background/contact-buttons.png);
         }
 
         .call-me__button:active{
@@ -586,7 +586,7 @@ $bg-purple: #b168e8;
                 display: none;
                 width: 50px;
                 height: 50px;
-                background-image: url(/assets/icons/call-you_cancel.png);
+                background-image: url(../assets/icons/call-you_cancel.png);
                 background-color: inherit;
                 background-size: cover;
                 background-position: center;
@@ -616,7 +616,7 @@ $bg-purple: #b168e8;
 
             .contact-form__button:hover{
                 @extend %hover-shared;
-                background-image: url(/assets/background/contact-buttons.png)
+                background-image: url(../assets/background/contact-buttons.png)
             }
 
             .contact-form__button:active{
@@ -673,7 +673,7 @@ $bg-purple: #b168e8;
 
             .call-you__btn{
                 display: flex;
-                background-image: url(/assets/icons/call-you.png);
+                background-image: url(../assets/icons/call-you.png);
                 justify-content: center;
                 align-items: center;
                 height: 260px;
@@ -744,7 +744,7 @@ $bg-purple: #b168e8;
                 align-items: center;
                 height: 260px;
                 width: 260px;
-                background-image: url(/assets/icons/call-me.png);
+                background-image: url(../assets/icons/call-me.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
