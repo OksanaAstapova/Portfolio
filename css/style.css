@@ -458,7 +458,7 @@
   z-index: 3;
 }
 .language .language__eng {
-  background-image: url(../assets/icons/eng-lang.png);
+  background-image: url(../../assets/icons/eng-lang.png);
 }
 .language .language__ru {
   background-image: url(../assets/icons/rus-lang.png);
