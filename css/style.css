@@ -19,12 +19,12 @@
 .sections {
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   width: 100vw;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 80px);
 }
 
 .start-page {
   display: flex;
-  overflow-x: hidden;
+  height: calc(100vh - 80px);
 }
 
 .inspiration-page {
@@ -32,6 +32,7 @@
 }
 
 .body {
+  overflow: hidden;
   margin: 0;
   background-image: url(../assets/background/MyPortfolio1.jpg);
 }
@@ -1074,9 +1075,6 @@
   }
 }
 @media (max-width: 690px) {
-  .body {
-    overflow-y: hidden;
-  }
   .menu-mobile {
     display: flex;
     cursor: pointer;

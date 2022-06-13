@@ -32,13 +32,13 @@ $bg-purple: #b168e8;
     @extend %bg-shared;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     width: 100vw;
-    height: calc(100vh - 75px);
+    height: calc(100vh - 80px);
     
 }
 
 .start-page{
    display: flex;
-    overflow: hidden;
+    height: calc(100vh - 80px);
 
 }
 
@@ -48,7 +48,8 @@ $bg-purple: #b168e8;
 
 
 .body{
-
+    
+    overflow: hidden;
     margin: 0;
     background-image: url(../assets/background/MyPortfolio1.jpg);
 
@@ -826,12 +827,6 @@ $bg-purple: #b168e8;
 @media (max-width: 690px){
 
     
-    
-    .body{
-
-        overflow-y: hidden; 
-   }
-
     .menu-mobile{
         
         display: flex;
