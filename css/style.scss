@@ -481,6 +481,14 @@ $bg-purple: #b168e8;
    @extend %bg-shared;
    background-color: unset;
    border: none;
+   z-index: 5;
+   transition: .3s;
+   cursor: pointer;
+}
+
+.inspiration-page__button:active{
+
+    transform: translateY(7px);
 }
 
 

@@ -128,8 +128,8 @@ function closeModal(){
     
 }
 
-function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0; 
-}
+// document.querySelector(".inspiration-page__button").addEventListener("click", ()=>{
+//     document.body.scrollTop = 0;
+//     document.documentElement.scrollTop = 0; 
+// })
 

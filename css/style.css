@@ -777,6 +777,13 @@
   background-image: url(../assets/icons/up-arrow.png);
   background-color: unset;
   border: none;
+  z-index: 5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.inspiration-page__button:active {
+  transform: translateY(7px);
 }
 
 /*----------CONTACTS--------------*/

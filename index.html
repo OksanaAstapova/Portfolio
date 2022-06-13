@@ -14,7 +14,7 @@
   <body class="body">
     <div class="black-back">
     </div>
-    <header class="head">
+    <header class="head" id="scroll-up">
       <div class="menu-mobile">
         <p>Menu</p>
       </div>
@@ -98,7 +98,6 @@
         <button class="languages language__bel"></button>
         <button class="languages language__ru"></button>
         <button class="languages language__lt"></button>
-
       </div>
       <img class="girl" src="assets/background/Girl.png" alt="A girl with flowers">
       <div class="info">
@@ -178,8 +177,9 @@
       <div class="modal-card">
       </div>
       <main>
-        <button onclick="topFunction()" class="inspiration-page__button"></button>
-        <div class="gallery">
+       <span id="scroll-top"></span>
+        <div class="gallery"> 
+        <a href="#scroll-top"><button class="inspiration-page__button"></button></a>
         </div>
       </main>
     </section>
