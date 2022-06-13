@@ -475,7 +475,12 @@ $bg-purple: #b168e8;
 .inspiration-page__button{
     display: none;
     position: fixed;
-    // right: 0;
+    width: 75px;
+    height: 75px;
+   background-image: url(../assets/icons/up-arrow.png);
+   @extend %bg-shared;
+   background-color: unset;
+   border: none;
 }
 
 
@@ -650,6 +655,14 @@ $bg-purple: #b168e8;
         width: 600px;
 
     }
+ /*------------INSPIRATION------------*/
+    
+
+ .inspiration-page__button{
+    display: flex;
+    top: 80vh;
+    left: 5vw;
+}
 
     .black-back,
     .modal-card{
@@ -917,18 +930,7 @@ $bg-purple: #b168e8;
              
         }  
     }
-
-    /*------------INSPIRATION------------*/
-    .black-back,
-    .modal-card{
-        display: none;
-    }
-
-    .inspiration-page__button{
-        display: flex;
-    }
-
-   
+    
 }
 
 @media ( max-width: 500px){

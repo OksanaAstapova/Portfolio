@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap");
-.box-wrapper, .language .languages, .sections {
+.box-wrapper, .inspiration-page__button, .language .languages, .sections {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -772,6 +772,11 @@
 .inspiration-page__button {
   display: none;
   position: fixed;
+  width: 75px;
+  height: 75px;
+  background-image: url(../assets/icons/up-arrow.png);
+  background-color: unset;
+  border: none;
 }
 
 /*----------CONTACTS--------------*/
@@ -924,6 +929,12 @@
   }
   .girl {
     width: 600px;
+  }
+  /*------------INSPIRATION------------*/
+  .inspiration-page__button {
+    display: flex;
+    top: 80vh;
+    left: 5vw;
   }
   .black-back,
 .modal-card {
@@ -1137,14 +1148,6 @@
   }
   .page .page__right-side {
     display: none;
-  }
-  /*------------INSPIRATION------------*/
-  .black-back,
-.modal-card {
-    display: none;
-  }
-  .inspiration-page__button {
-    display: flex;
   }
 }
 @media (max-width: 500px) {
