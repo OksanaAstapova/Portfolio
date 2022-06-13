@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 .box-wrapper, .inspiration-page__button, .language .languages, .sections {
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +44,7 @@
 .menu-mobile {
   width: 100vw;
   height: 70px;
-  font-size: 2em;
+  font-size: 2.2em;
   user-select: none;
   background-color: #b168e8;
   display: flex;
@@ -84,7 +84,7 @@
   text-decoration: none;
   color: #230b25;
   font-family: "Nunito", Arial, sans-serif;
-  font-size: 2em;
+  font-size: 2.2em;
   user-select: none;
 }
 .menu .menu__button:not(.menu__button_active):hover {
@@ -493,7 +493,7 @@
   margin: 0 auto;
   width: 60vw;
   color: black;
-  font-size: 2em;
+  font-size: 2.2em;
   line-height: 130%;
   font-family: "Nunito", Arial, sans-serif;
   text-shadow: 0px 1px 1px #8c8c8c;
@@ -591,6 +591,7 @@
   width: 100px;
   height: 100px;
   font-family: "Nunito", Arial, sans-serif;
+  font-size: 1.1em;
   border: 2px gray solid;
   user-select: none;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
@@ -638,7 +639,7 @@
   justify-content: space-around;
   align-items: center;
   font-family: "Nunito", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 .page__right-side .screen__figcaption button {
   -webkit-border-radius: 50%;
@@ -648,10 +649,10 @@
   border-radius: 50%;
   border: 1.5px #b168e8 solid;
   background-color: #b168e8;
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
   font-family: "Nunito", Arial, sans-serif;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 .page__right-side .screen__figcaption button:active {
   box-shadow: 0 3px 0 #8c8c8c;
@@ -977,7 +978,7 @@
   }
   .box-wrapper .call-you .call-you__btn p {
     font-family: "Nunito", Arial, sans-serif;
-    font-size: 1.6em;
+    font-size: 2em;
     text-align: center;
     width: 70%;
     user-select: none;
@@ -1045,7 +1046,7 @@
   }
   .box-wrapper .call-me .call-me__btn p {
     font-family: "Nunito", Arial, sans-serif;
-    font-size: 1.6em;
+    font-size: 2em;
     text-align: center;
     width: 70%;
     user-select: none;

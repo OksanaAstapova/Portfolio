@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 $font: 'Nunito', Arial, sans-serif;
 
 $bg-purple: #b168e8;
@@ -62,7 +62,7 @@ $bg-purple: #b168e8;
  
     width: 100vw;
     height: 70px;
-    font-size: 2em;
+    font-size: 2.2em;
     user-select: none;
     background-color: $bg-purple;
     display: flex;
@@ -95,7 +95,7 @@ $bg-purple: #b168e8;
         text-decoration: none;
         color: #230b25;
         font-family: $font;
-        font-size: 2em;
+        font-size: 2.2em;
         user-select: none;
     }
     
@@ -176,7 +176,7 @@ $bg-purple: #b168e8;
     margin: 0 auto;
     width: 60vw;
     color: black;
-    font-size: 2em;
+    font-size: 2.2em;
     line-height: 130%;
     font-family:$font;
     text-shadow: 0px 1px 1px #8c8c8c;
@@ -268,6 +268,7 @@ $bg-purple: #b168e8;
         width: 100px;
         height: 100px;
         font-family: $font;
+        font-size: 1.1em;
         border: 2px gray solid;
         user-select: none;
         box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
@@ -322,16 +323,16 @@ $bg-purple: #b168e8;
     justify-content: space-around;
     align-items: center;
     font-family: $font;
-    font-size: 1.2em;
+    font-size: 1.3em;
 
     button{
         @include border-radius(50%);
         border: 1.5px $bg-purple solid;
         background-color: $bg-purple;
-        height: 50px;
-        width: 50px;
+        height: 55px;
+        width: 55px;
         font-family: $font;
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     button:hover{
@@ -710,7 +711,7 @@ $bg-purple: #b168e8;
 
                 p{
                     font-family: $font;
-                    font-size: 1.6em;   
+                    font-size: 2em;   
                     text-align: center;
                     width: 70%;
                     user-select: none;
@@ -790,7 +791,7 @@ $bg-purple: #b168e8;
 
                 p{
                     font-family: $font;
-                    font-size: 1.6em;   
+                    font-size: 2em;   
                     text-align: center;
                     width: 70%;
                     user-select: none;
