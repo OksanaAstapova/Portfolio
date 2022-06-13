@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
-$font: 'Poppins', 'Montserrat', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+$font: 'Poppins', 'Roboto', Arial, sans-serif;
 
 $bg-purple: #b168e8;
 
@@ -32,8 +32,7 @@ $bg-purple: #b168e8;
     @extend %bg-shared;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     width: 100vw;
-    height: calc(100vh - 74px);
-    // min-height: 100vh;
+    height: calc(100vh - 100px);
     
 }
 
@@ -945,7 +944,7 @@ $bg-purple: #b168e8;
 
     .info{
         width: 66vw;
-        margin-top: 10vh;
+        margin-top: 6vh;
         margin-left: 5vw;
         justify-content: flex-start;}
 

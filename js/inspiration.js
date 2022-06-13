@@ -113,13 +113,10 @@ function openModal(k){
                        
 
         modal.innerHTML += modalWrapper;
-        // modal.style.transition = "visibility 1s linear,opacity 1s linear";
-
-        
+       
 }
 
 function closeModal(){
-    // modal.style.transition = "";
     modal.innerHTML = "";
     blackBack.style.visibility = "hidden";
     modal.style.visibility = "hidden";
@@ -128,8 +125,4 @@ function closeModal(){
     
 }
 
-// document.querySelector(".inspiration-page__button").addEventListener("click", ()=>{
-//     document.body.scrollTop = 0;
-//     document.documentElement.scrollTop = 0; 
-// })
 
