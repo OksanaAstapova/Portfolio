@@ -713,8 +713,14 @@ $bg-purple: #b168e8;
 
                 .call-you__cancel{
                     display: flex;
+                    transition: .3s;
                 }
     
+                .call-you__cancel:hover{
+                    cursor: pointer;
+                    transform: scale(1.2);
+                }
+
                 .call-you__cancel:active{
                 transform: scale(0.8);
     
@@ -727,7 +733,13 @@ $bg-purple: #b168e8;
           align-items: center;
 
             .call-me__cancel{
+                transition: .3s;
                 display: flex;
+            }
+
+            .call-me__cancel:hover{
+               cursor: pointer;
+               transform: scale(1.2);
             }
 
             .call-me__cancel:active{

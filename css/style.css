@@ -982,6 +982,11 @@
   }
   .box-wrapper .call-you .contact-form .call-you__cancel {
     display: flex;
+    transition: 0.3s;
+  }
+  .box-wrapper .call-you .contact-form .call-you__cancel:hover {
+    cursor: pointer;
+    transform: scale(1.2);
   }
   .box-wrapper .call-you .contact-form .call-you__cancel:active {
     transform: scale(0.8);
@@ -990,7 +995,12 @@
     align-items: center;
   }
   .box-wrapper .call-me .call-me__cancel {
+    transition: 0.3s;
     display: flex;
+  }
+  .box-wrapper .call-me .call-me__cancel:hover {
+    cursor: pointer;
+    transform: scale(1.2);
   }
   .box-wrapper .call-me .call-me__cancel:active {
     transform: scale(0.8);
