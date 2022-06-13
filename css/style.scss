@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
-$font: 'Poppins', 'Roboto', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+$font: 'Nunito', Arial, sans-serif;
 
 $bg-purple: #b168e8;
 
@@ -32,7 +32,7 @@ $bg-purple: #b168e8;
     @extend %bg-shared;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 75px);
     
 }
 
@@ -262,7 +262,7 @@ $bg-purple: #b168e8;
     .page__go-project{
         display: none;
     }
-
+   
     .page__button{
         @include border-radius(50%);
         width: 100px;
@@ -350,6 +350,9 @@ $bg-purple: #b168e8;
 
 /*------------inspiration-----------*/
 
+.scroll-top{
+   position: absolute;
+}
 .gallery{
     display: flex;
     flex-direction: row;
@@ -872,9 +875,6 @@ $bg-purple: #b168e8;
         display: none;
     }
 
-   
-   
-
         .info__button{
             display: none;
         }
@@ -884,6 +884,7 @@ $bg-purple: #b168e8;
 
         left: 0;
         right: unset;
+        bottom: 50px;
     }
 
     /*------PROJECTS---------*/
@@ -921,7 +922,31 @@ $bg-purple: #b168e8;
             }
         }
 
+        .go-project_right{
+            margin-right: -600px;
+            transition: 1s;
+        }
+
+        .transition-right{
+
+            margin-right: 0;
+        }
+
+        .go-project_left{
+
+            margin-left: -600px;
+            transition: 1s;
+            background-image: linear-gradient(0deg, #e5e3e3 50%,  #c5c5c5 50%);
+            background-size: 4px 4px; ;
+        }
+
+        .transition-left{
+
+            margin-left: 0;
+        }
+
         .page__go-project:active{
+
             box-shadow: 0 3px 0 #8c8c8c;
             transform: translateY(5px);
         }

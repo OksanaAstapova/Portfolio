@@ -35,3 +35,12 @@ mem.addEventListener('click', () => {
     screenShelter.classList.remove('screen_active');
 })
 
+document.querySelector(".menu__button_projects").addEventListener("click", ()=>{
+
+   document.querySelector(".go-project_right_keyboard").classList.add("transition-right");
+   document.querySelector(".go-project_right_mem").classList.add("transition-right");
+   document.querySelector(".go-project_left").classList.add("transition-left");
+
+
+
+})

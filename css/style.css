@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
 .box-wrapper, .inspiration-page__button, .language .languages, .sections {
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@
 .sections {
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 75px);
 }
 
 .start-page {
@@ -51,7 +51,7 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   display: none;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -83,7 +83,7 @@
   width: 100%;
   text-decoration: none;
   color: #230b25;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   font-size: 2em;
   user-select: none;
 }
@@ -495,7 +495,7 @@
   color: black;
   font-size: 2em;
   line-height: 130%;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   text-shadow: 0px 1px 1px #8c8c8c;
   user-select: none;
   z-index: 1;
@@ -505,7 +505,7 @@
 }
 
 .info__button {
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   background-image: linear-gradient(0deg, #e5e3e3 50%, #c5c5c5 50%);
   background-size: 4px 4px;
   font-size: 0.8em;
@@ -590,7 +590,7 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   border: 2px gray solid;
   user-select: none;
   box-shadow: 10px 10px 10px 2px rgba(34, 60, 80, 0.2);
@@ -637,7 +637,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   font-size: 1.2em;
 }
 .page__right-side .screen__figcaption button {
@@ -650,7 +650,7 @@
   background-color: #b168e8;
   height: 50px;
   width: 50px;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   font-size: 1.1em;
 }
 .page__right-side .screen__figcaption button:active {
@@ -660,6 +660,10 @@
 }
 
 /*------------inspiration-----------*/
+.scroll-top {
+  position: absolute;
+}
+
 .gallery {
   display: flex;
   flex-direction: row;
@@ -835,7 +839,7 @@
 }
 .box-wrapper .call-me .call-me__heading {
   font-size: 1.7em;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   color: white;
   text-align: center;
   font-weight: lighter;
@@ -846,7 +850,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   font-size: 1.5em;
   height: 100%;
   width: 200px;
@@ -869,7 +873,7 @@
 }
 .box-wrapper .call-you .call-you__heading {
   font-size: 1.7em;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   color: rgb(8, 8, 8);
   text-align: center;
   font-weight: lighter;
@@ -904,7 +908,7 @@
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  font-family: "Poppins", "Roboto", Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   font-size: 1.3em;
   width: 200px;
   height: 40px;
@@ -972,7 +976,7 @@
     cursor: pointer;
   }
   .box-wrapper .call-you .call-you__btn p {
-    font-family: "Poppins", "Roboto", Arial, sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
     font-size: 1.6em;
     text-align: center;
     width: 70%;
@@ -1040,7 +1044,7 @@
     cursor: pointer;
   }
   .box-wrapper .call-me .call-me__btn p {
-    font-family: "Poppins", "Roboto", Arial, sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
     font-size: 1.6em;
     text-align: center;
     width: 70%;
@@ -1113,6 +1117,7 @@
   .links {
     left: 0;
     right: unset;
+    bottom: 50px;
   }
   /*------PROJECTS---------*/
   .page {
@@ -1143,8 +1148,24 @@
   .page .page__left-side .page__go-project button {
     border: none;
     background-color: unset;
-    font-family: "Poppins", "Roboto", Arial, sans-serif;
+    font-family: "Nunito", Arial, sans-serif;
     font-size: 1.2em;
+  }
+  .page .page__left-side .go-project_right {
+    margin-right: -600px;
+    transition: 1s;
+  }
+  .page .page__left-side .transition-right {
+    margin-right: 0;
+  }
+  .page .page__left-side .go-project_left {
+    margin-left: -600px;
+    transition: 1s;
+    background-image: linear-gradient(0deg, #e5e3e3 50%, #c5c5c5 50%);
+    background-size: 4px 4px;
+  }
+  .page .page__left-side .transition-left {
+    margin-left: 0;
   }
   .page .page__left-side .page__go-project:active {
     box-shadow: 0 3px 0 #8c8c8c;
