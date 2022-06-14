@@ -19,12 +19,12 @@
 .sections {
   transition: ease-in-out 0.8s, opacity ease-in-out 0.8s;
   width: 100vw;
-  height: calc(100vh - 80px);
+  height: calc(100% - 70px);
+  overflow-y: hidden;
 }
 
 .start-page {
   display: flex;
-  height: calc(100vh - 80px);
 }
 
 .inspiration-page {
