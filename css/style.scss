@@ -2,6 +2,8 @@
 $font: 'Nunito', Arial, sans-serif;
 
 $bg-purple: #b168e8;
+$bg-yellow: #A6F16C
+;
 
 %bg-shared {
     background-position: center;
@@ -33,7 +35,7 @@ $bg-purple: #b168e8;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     width: 100vw;
     height: calc(100% - 70px);
-        overflow-y: hidden;
+    overflow: hidden;
 
 }
 
@@ -304,7 +306,7 @@ $bg-purple: #b168e8;
     visibility: hidden;
     opacity: 0;
     flex-direction: column;
-    background-color: lightgreen;
+    background-color: $bg-yellow;
     box-shadow: 1em 1em 1em rgba(60, 59, 59, 0.516);
     @include border-radius(10px);
     transition: ease-in-out .8s, opacity ease-in-out .8s;
@@ -725,7 +727,7 @@ $bg-purple: #b168e8;
                 opacity: 0;
                 position: absolute;
                 transition: visibility 0.7s linear,opacity 0.7s linear;
-                background-color: lightgreen;
+                background-color: $bg-yellow;
                 @include border-radius(10px);
                 height: 75vh;
                 width: 85vw;
@@ -855,9 +857,8 @@ $bg-purple: #b168e8;
     }
 
     .menu-mobile_color{
-
         
-        background: lightgreen;
+        background: #D8FA3F	;
 
     }
     
@@ -906,7 +907,7 @@ $bg-purple: #b168e8;
             border: 1px black solid;
             user-select: none;
             text-decoration: none;
-            background-color: lightgreen;
+            background-color: $bg-yellow;
             
 
             button{
