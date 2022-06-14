@@ -18,6 +18,9 @@ welcomeBtn.addEventListener("click", ()=>{
     document.querySelector(".inspiration-page").style.opacity = "0";
     document.querySelector(".contacts-page").style.visibility = "hidden";
     document.querySelector(".contacts-page").style.opacity = "0";
+
+    callMe_btn.classList.remove("call-me__btn_up");
+    textMe_btn.classList.remove("text-me__btn_down");
 })
 
 projectsBtn.addEventListener("click", ()=>{
@@ -34,6 +37,13 @@ projectsBtn.addEventListener("click", ()=>{
     document.querySelector(".inspiration-page").style.opacity = "0";
     document.querySelector(".contacts-page").style.visibility = "hidden";
     document.querySelector(".contacts-page").style.opacity = "0";
+
+    document.querySelector(".go-project_right_keyboard").classList.add("transition-right");
+    document.querySelector(".go-project_right_mem").classList.add("transition-right");
+    document.querySelector(".go-project_left").classList.add("transition-left");
+
+    callMe_btn.classList.remove("call-me__btn_up");
+    textMe_btn.classList.remove("text-me__btn_down");
 
 
 })
@@ -53,6 +63,9 @@ inspirationBtn.addEventListener("click", ()=>{
     document.querySelector(".contacts-page").style.visibility = "hidden";
     document.querySelector(".contacts-page").style.opacity = "0";
 
+    callMe_btn.classList.remove("call-me__btn_up");
+    textMe_btn.classList.remove("text-me__btn_down");
+
 })
 
 contactsBtn.addEventListener("click", ()=>{
@@ -69,6 +82,10 @@ contactsBtn.addEventListener("click", ()=>{
     document.querySelector(".inspiration-page").style.opacity = "0";
     document.querySelector(".start-page").style.visibility = "hidden";
     document.querySelector(".start-page").style.opacity = "0";
+
+    callMe_btn.classList.add("call-me__btn_up");
+    textMe_btn.classList.add("text-me__btn_down");
+
 
 })
 
@@ -293,10 +310,10 @@ function closeModal(){
 
 let callMe_btn = document.querySelector(".call-me__btn");
 let callMe_content = document.querySelector(".call-me__content");
-let callYou_btn = document.querySelector(".call-you__btn");
-let callYou_content = document.querySelector(".contact-form");
+let textMe_content = document.querySelector(".text-me__content");
+let textMe_btn = document.querySelector(".text-me__btn");
 let callMe_cancel = document.querySelector(".call-me__cancel");
-let callYou_cancel = document.querySelector(".call-you__cancel");
+let textMe_cancel = document.querySelector(".text-me__cancel");
 
 callMe_btn.addEventListener("click",()=>{
 
@@ -306,11 +323,11 @@ callMe_btn.addEventListener("click",()=>{
 })
 
 
-callYou_btn.addEventListener("click",()=>{
+textMe_btn.addEventListener("click",()=>{
 
-    callYou_cancel.style.display = "flex";
-    callYou_content.style.visibility = "visible";
-    callYou_content.style.opacity = "1";
+    textMe_cancel.style.display = "flex";
+    textMe_content.style.visibility = "visible";
+    textMe_content.style.opacity = "1";
 
 })
 
@@ -320,8 +337,9 @@ callMe_cancel.addEventListener("click", ()=>{
     
 })
 
-callYou_cancel.addEventListener("click", ()=>{
-    callYou_content.style.visibility = "hidden";
-    callYou_content.style.opacity = "0";  
+textMe_cancel.addEventListener("click", ()=>{
+   textMe_content.style.visibility = "hidden";
+   textMe_content.style.opacity = "0";  
     
 })
+
