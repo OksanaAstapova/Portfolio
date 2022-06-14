@@ -2,7 +2,7 @@
 $font: 'Nunito', Arial, sans-serif;
 
 $bg-purple: #b168e8;
-$bg-yellow: #A6F16C
+$bg-yellow: lightgreen; 
 ;
 
 %bg-shared {
@@ -844,7 +844,7 @@ $bg-yellow: #A6F16C
         @include border-radius(10px);
         background-image: linear-gradient(0deg, #e5e3e3 50%,  #c5c5c5 50%);
         background-size: 4px 4px;
-        cursor: pointer;    
+        cursor: pointer;
 
         .menu__button{
             height: 75px;
@@ -858,7 +858,7 @@ $bg-yellow: #A6F16C
 
     .menu-mobile_color{
         
-        background: #D8FA3F	;
+        background: $bg-yellow;
 
     }
     
