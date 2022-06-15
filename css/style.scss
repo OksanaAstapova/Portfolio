@@ -414,9 +414,9 @@ $bg-yellow: lightgreen;
 
 .modal-card{
     display: flex;
-    position: absolute;
+    position: fixed;
     left: calc(50vw - 900px/2);
-    top: calc(50vh - 500px/2 - 70px - 60px);
+    // top: calc(50vh - 500px/2 - 70px - 60px);
     flex-direction: column;
     z-index: 999;
     visibility: hidden;
@@ -427,16 +427,17 @@ $bg-yellow: lightgreen;
 
 
     .modal-card__close-btn{
-        width: 60px;
-        height: 60px;
-        margin-left: 880px;
+       
+        margin-left: 870px;
         background: none;
         border: none;
         cursor: pointer;
+        width: 100px;
+        margin-bottom: -16px;
 
         img{
-            width: 125%;
-            height: 125%;
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }    
         
@@ -474,6 +475,7 @@ $bg-yellow: lightgreen;
     background-color: #000000dd;
     z-index: 8;
     margin: 0px;
+    cursor: pointer;
 }
 
 .inspiration-page__button{
@@ -667,11 +669,13 @@ $bg-yellow: lightgreen;
        .modal-card{
         
         left: calc(50vw - 80vw/2);
-        top: calc(50vh - 80vh/2 - 70px);
+        top: calc(50vh - 80vh/2 - 40px);
 
         .modal-card__close-btn{
-            margin-left: 75vw;
+            margin-left: 77vw;
             z-index: 10;
+            margin-bottom: -12px;
+            width: 60px;
         }
 
         .modal-card__wrapper{
@@ -985,15 +989,7 @@ $bg-yellow: lightgreen;
         justify-content: flex-start;
     }
 
-    .modal-card .modal-card__close-btn{
-
-            img{
-
-             width: 40px;
-            height: 40px;    
-            }
-       
-    }
-
+    .modal-card .modal-card__close-btn {
+        margin-left: 72vw;}
 
 }

@@ -1,3 +1,8 @@
+let start =  document.querySelector(".start-page");
+let projects =  document.querySelector(".projects-page");
+let inspiration =  document.querySelector(".inspiration-page");
+let contacts = document.querySelector(".contacts-page");
+
 let welcomeBtn = document.querySelector(".menu__button_welcome");
 let projectsBtn = document.querySelector(".menu__button_projects");
 let inspirationBtn = document.querySelector(".menu__button_inspiration");
@@ -10,14 +15,14 @@ welcomeBtn.addEventListener("click", ()=>{
     inspirationBtn.classList.remove("menu__button_active");
     contactsBtn.classList.remove("menu__button_active");
 
-    document.querySelector(".start-page").style.visibility = "visible";
-    document.querySelector(".start-page").style.opacity = "1";
-    document.querySelector(".projects-page").style.visibility = "hidden";
-    document.querySelector(".projects-page").style.opacity = "0";
-    document.querySelector(".inspiration-page").style.visibility = "hidden";
-    document.querySelector(".inspiration-page").style.opacity = "0";
-    document.querySelector(".contacts-page").style.visibility = "hidden";
-    document.querySelector(".contacts-page").style.opacity = "0";
+    start.style.visibility = "visible";
+    start.style.opacity = "1";
+    projects.style.visibility = "hidden";
+    projects.style.opacity = "0";
+    inspiration.style.visibility = "hidden";
+    inspiration.style.opacity = "0";
+    contacts.style.visibility = "hidden";
+    contacts.style.opacity = "0";
 
     callMe_btn.classList.remove("call-me__btn_up");
     textMe_btn.classList.remove("text-me__btn_down");
@@ -29,14 +34,14 @@ projectsBtn.addEventListener("click", ()=>{
     inspirationBtn.classList.remove("menu__button_active");
     contactsBtn.classList.remove("menu__button_active");
 
-    document.querySelector(".projects-page").style.visibility = "visible";
-    document.querySelector(".projects-page").style.opacity = "1";
-    document.querySelector(".start-page").style.visibility = "hidden";
-    document.querySelector(".start-page").style.opacity = "0";
-    document.querySelector(".inspiration-page").style.visibility = "hidden";
-    document.querySelector(".inspiration-page").style.opacity = "0";
-    document.querySelector(".contacts-page").style.visibility = "hidden";
-    document.querySelector(".contacts-page").style.opacity = "0";
+    projects.style.visibility = "visible";
+    projects.style.opacity = "1";
+    start.style.visibility = "hidden";
+    start.style.opacity = "0";
+    inspiration.style.visibility = "hidden";
+    inspiration.style.opacity = "0";
+    contacts.style.visibility = "hidden";
+    contacts.style.opacity = "0";
 
     document.querySelector(".go-project_right_keyboard").classList.add("transition-right");
     document.querySelector(".go-project_right_mem").classList.add("transition-right");
@@ -54,14 +59,14 @@ inspirationBtn.addEventListener("click", ()=>{
     projectsBtn.classList.remove("menu__button_active");
     contactsBtn.classList.remove("menu__button_active");
 
-    document.querySelector(".inspiration-page").style.visibility = "visible";
-    document.querySelector(".inspiration-page").style.opacity = "1";
-    document.querySelector(".projects-page").style.visibility = "hidden";
-    document.querySelector(".projects-page").style.opacity = "0";
-    document.querySelector(".start-page").style.visibility = "hidden";
-    document.querySelector(".start-page").style.opacity = "0";
-    document.querySelector(".contacts-page").style.visibility = "hidden";
-    document.querySelector(".contacts-page").style.opacity = "0";
+    inspiration.style.visibility = "visible";
+    inspiration.style.opacity = "1";
+    projects.style.visibility = "hidden";
+    projects.style.opacity = "0";
+    start.style.visibility = "hidden";
+    start.style.opacity = "0";
+    contacts.style.visibility = "hidden";
+    contacts.style.opacity = "0";
 
     callMe_btn.classList.remove("call-me__btn_up");
     textMe_btn.classList.remove("text-me__btn_down");
@@ -74,14 +79,14 @@ contactsBtn.addEventListener("click", ()=>{
     projectsBtn.classList.remove("menu__button_active");
     inspirationBtn.classList.remove("menu__button_active");
 
-    document.querySelector(".contacts-page").style.visibility = "visible";
-    document.querySelector(".contacts-page").style.opacity = "1";
-    document.querySelector(".projects-page").style.visibility = "hidden";
-    document.querySelector(".projects-page").style.opacity = "0";
-    document.querySelector(".inspiration-page").style.visibility = "hidden";
-    document.querySelector(".inspiration-page").style.opacity = "0";
-    document.querySelector(".start-page").style.visibility = "hidden";
-    document.querySelector(".start-page").style.opacity = "0";
+    contacts.style.visibility = "visible";
+    contacts.style.opacity = "1";
+    projects.style.visibility = "hidden";
+    projects.style.opacity = "0";
+    inspiration.style.visibility = "hidden";
+    inspiration.style.opacity = "0";
+    start.style.visibility = "hidden";
+    start.style.opacity = "0";
 
     callMe_btn.classList.add("call-me__btn_up");
     textMe_btn.classList.add("text-me__btn_down");
@@ -90,8 +95,8 @@ contactsBtn.addEventListener("click", ()=>{
 })
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    document.querySelector(".start-page").style.visibility = "visible";
-    document.querySelector(".start-page").style.opacity = "1";
+    start.style.visibility = "visible";
+    start.style.opacity = "1";
 
     
    
@@ -281,8 +286,8 @@ function openModal(k){
     blackBack.style.visibility = "visible";
     modal.style.visibility = "visible";
     modal.style.opacity = "1";
-    body.style.overflow = "hidden";
-        modal.classList.add('animation-modal');
+    modal.classList.add('animation-modal');
+    inspiration.style.overflow = "hidden";
 
 
     let modalWrapper = `<button class="modal-card__close-btn" onclick="closeModal()">
@@ -302,9 +307,13 @@ function closeModal(){
     blackBack.style.visibility = "hidden";
     modal.style.visibility = "hidden";
     modal.style.opacity - "0";
-    body.style.overflow = "visible";
+    inspiration.style.overflow = "scroll";
+
     
 }
+
+blackBack.addEventListener("click", closeModal);
+
 
 /*-------CONTACTS-------------*/
 
