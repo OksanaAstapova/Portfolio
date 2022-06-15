@@ -29,13 +29,11 @@ buttonBel.addEventListener("click", ()=>{
     document.querySelector(".screen_shelter > figcaption > p").textContent = "Мой праект Прытулак для хатніх жывёл";
     document.querySelector(".screen_mem > figcaption > p").textContent = "Мой праект Мем-Слайдэр на чыстым CSS без JS";
 
-    document.querySelector(".call-me__btn_text").textContent = "Напішыце мне";
-    document.querySelector(".call-you__btn_text").textContent = "Патэлефаную вам";
-    document.querySelector(".call-me__heading").textContent = "Напішыце мне";
-    document.querySelector(".call-you__heading").textContent = "Патэлефаную вам";
-    inputName.placeholder = "Iмя";
-    inputPhone.placeholder = "Тэлефон";
-    document.querySelector(".contact-form__button").textContent = "Адправіць";
+    document.querySelector(".call-me__btn_text").textContent = "Пазванiце мне";
+    document.querySelector(".text-me__btn_text").textContent = "Напiшыце мне";
+    document.querySelector(".call-me__heading").textContent = "Пазванiце мне";
+    document.querySelector(".text-me__heading").textContent = "Напiшыце мне";
+   
 
 })
 
@@ -63,12 +61,10 @@ buttonEng.addEventListener("click", ()=>{
     document.querySelector(".screen_mem > figcaption > p").textContent = "My Mem-Slider on pure CSS without JavaScript";
 
     document.querySelector(".call-me__btn_text").textContent = "Call me";
-    document.querySelector(".call-you__btn_text").textContent = "Call you";
+    document.querySelector(".text-me__btn_text").textContent = "Text me";
     document.querySelector(".call-me__heading").textContent = "Call me";
-    document.querySelector(".call-you__heading").textContent = "Call you";
-    inputName.placeholder = "Name";
-    inputPhone.placeholder = "Phone";
-    document.querySelector(".contact-form__button").textContent = "Send";
+    document.querySelector(".call-you__heading").textContent = "Text me";
+    document.querySelector(".text-me__button").textContent = "Send";
 
 })
 
@@ -95,13 +91,10 @@ buttonRus.addEventListener("click", ()=>{
     document.querySelector(".screen_shelter > figcaption > p").textContent = "Мой проект Приют для домашних животных";
     document.querySelector(".screen_mem > figcaption > p").textContent = "Мой CSS-мем-слайдер на чистом CSS без JS";
 
-    document.querySelector(".call-me__btn_text").textContent = "Напишите мне";
-    document.querySelector(".call-you__btn_text").textContent = "Позвоню вам";
-    document.querySelector(".call-me__heading").textContent = "Напишите мне";
-    document.querySelector(".call-you__heading").textContent = "Позвоню вам";
-    inputName.placeholder = "Имя";
-    inputPhone.placeholder = "Телефон";
-    document.querySelector(".contact-form__button").textContent = "Отправить";
+    document.querySelector(".call-me__btn_text").textContent = "Позвоните мне";
+    document.querySelector(".text-me__btn_text").textContent = "Напишите мне";
+    document.querySelector(".call-me__heading").textContent = "Позвоните мне";
+    document.querySelector(".text-me__heading").textContent = "Напишите мне";
 
 })
 
@@ -128,11 +121,8 @@ buttonLit.addEventListener("click", ()=>{
     document.querySelector(".screen_mem > figcaption > p").textContent = "Mano CSS-memų-slankiklis gryname CSS be „JavaScript“";
 
     document.querySelector(".call-me__btn_text").textContent = "Paskambink man";
-    document.querySelector(".call-you__btn_text").textContent = "Paskambinti tau";
+    document.querySelector(".text-me__btn_text").textContent = "Parašyk man";
     document.querySelector(".call-me__heading").textContent = "Paskambink man";
-    document.querySelector(".call-you__heading").textContent = "Paskambinti tau";
-    inputName.placeholder = "Vardas";
-    inputPhone.placeholder = "Telefonas";
-    document.querySelector(".contact-form__button").textContent = "Siųsti";
+    document.querySelector(".text-me__heading").textContent = "Parašyk man";
 
 })
