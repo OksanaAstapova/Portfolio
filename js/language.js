@@ -63,8 +63,7 @@ buttonEng.addEventListener("click", ()=>{
     document.querySelector(".call-me__btn_text").textContent = "Call me";
     document.querySelector(".text-me__btn_text").textContent = "Text me";
     document.querySelector(".call-me__heading").textContent = "Call me";
-    document.querySelector(".call-you__heading").textContent = "Text me";
-    document.querySelector(".text-me__button").textContent = "Send";
+    document.querySelector(".text-me__heading").textContent = "Text me";
 
 })
 
