@@ -131,45 +131,69 @@ document.querySelectorAll("li").forEach(k => {
 let keyboard = document.querySelector('.page__button_keyboard');
 let shelter = document.querySelector('.page__button_shelter');
 let mem = document.querySelector('.page__button_mem');
+let mkBaltic = document.querySelector('.page__button_mk-baltic');
 let screenKeyboard = document.querySelector('.screen_keyboard');
 let screenShelter = document.querySelector('.screen_shelter');
 let screenMem = document.querySelector('.screen_mem');
+let screenMkBaltic = document.querySelector('.screen_mk-baltic');
 
 keyboard.addEventListener('click', () => {
    keyboard.classList.add('page__button_active'); 
    shelter.classList.remove('page__button_active');
    mem.classList.remove('page__button_active');
+   mkBaltic.classList.remove('page__button_active');
 
    screenKeyboard.classList.add('screen_active');
    screenShelter.classList.remove('screen_active');
    screenMem.classList.remove('screen_active'); 
+   screenMkBaltic.classList.remove('screen_active'); 
+
 })
 
 shelter.addEventListener('click', () => {
    shelter.classList.add('page__button_active'); 
    keyboard.classList.remove('page__button_active');
    mem.classList.remove('page__button_active');
+   mkBaltic.classList.remove('page__button_active');
    
    screenShelter.classList.add('screen_active'); 
    screenKeyboard.classList.remove('screen_active');
    screenMem.classList.remove('screen_active');
+   screenMkBaltic.classList.remove('screen_active'); 
 })
 
 mem.addEventListener('click', () => {
     mem.classList.add('page__button_active'); 
     keyboard.classList.remove('page__button_active');
     shelter.classList.remove('page__button_active');
+    mkBaltic.classList.remove('page__button_active');
  
     screenMem.classList.add('screen_active'); 
     screenShelter.classList.remove('screen_active');
     screenShelter.classList.remove('screen_active');
+    screenMkBaltic.classList.remove('screen_active'); 
 })
+
+mkBaltic.addEventListener('click', () => {
+    mem.classList.remove('page__button_active'); 
+    keyboard.classList.remove('page__button_active');
+    shelter.classList.remove('page__button_active');
+    mkBaltic.classList.add('page__button_active');
+ 
+    screenMem.classList.remove('screen_active'); 
+    screenShelter.classList.remove('screen_active');
+    screenShelter.classList.remove('screen_active');
+    screenMkBaltic.classList.add('screen_active'); 
+})
+
 
 document.querySelector(".menu__button_projects").addEventListener("click", ()=>{
 
    document.querySelector(".go-project_right_keyboard").classList.add("transition-right");
    document.querySelector(".go-project_right_mem").classList.add("transition-right");
-   document.querySelector(".go-project_left").classList.add("transition-left");
+   document.querySelector(".go-project_left_shelter").classList.add("transition-left");
+   document.querySelector(".go-project_left_mk-baltic").classList.add("transition-left");
+
 })
 
 document.querySelectorAll(".menu__button_click").forEach(k => {
@@ -178,7 +202,10 @@ document.querySelectorAll(".menu__button_click").forEach(k => {
 
       document.querySelector(".go-project_right_keyboard").classList.remove("transition-right");
       document.querySelector(".go-project_right_mem").classList.remove("transition-right");
-      document.querySelector(".go-project_left").classList.remove("transition-left");
+      document.querySelector(".go-project_left_shelter").classList.remove("transition-left");
+      document.querySelector(".go-project_left_mk-baltic").classList.remove("transition-left");
+
+
     })
 })
 

@@ -258,7 +258,7 @@ $bg-yellow: lightgreen;
 .page__left-side{
     display: flex;
     flex-direction: column;
-    gap: 10vh;
+    gap: 3vh;
     margin-top: 10vh;
 
     .page__go-project{
@@ -925,8 +925,8 @@ $bg-yellow: lightgreen;
             display: flex;
             justify-content: center;
             @include border-radius(50%);
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border: 1px black solid;
             user-select: none;
             text-decoration: none;
