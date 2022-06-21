@@ -24,8 +24,10 @@ welcomeBtn.addEventListener("click", ()=>{
     contacts.style.visibility = "hidden";
     contacts.style.opacity = "0";
 
-    callMe_btn.classList.remove("call-me__btn_up");
-    textMe_btn.classList.remove("text-me__btn_down");
+   removeAnimation_contactBtn();
+   removeScale();
+   removeClip();
+
 })
 
 projectsBtn.addEventListener("click", ()=>{
@@ -47,9 +49,9 @@ projectsBtn.addEventListener("click", ()=>{
     document.querySelector(".go-project_right_mem").classList.add("transition-right");
     document.querySelector(".go-project_left").classList.add("transition-left");
 
-    callMe_btn.classList.remove("call-me__btn_up");
-    textMe_btn.classList.remove("text-me__btn_down");
-
+    removeAnimation_contactBtn()
+    removeScale();
+    removeClip();
 
 })
 
@@ -68,8 +70,10 @@ inspirationBtn.addEventListener("click", ()=>{
     contacts.style.visibility = "hidden";
     contacts.style.opacity = "0";
 
-    callMe_btn.classList.remove("call-me__btn_up");
-    textMe_btn.classList.remove("text-me__btn_down");
+    removeAnimation_contactBtn()
+    removeScale();
+    removeClip();
+
 
 })
 
@@ -90,6 +94,10 @@ contactsBtn.addEventListener("click", ()=>{
 
     callMe_btn.classList.add("call-me__btn_up");
     textMe_btn.classList.add("text-me__btn_down");
+
+    removeScale();
+     removeClip();
+
 
 
 })
@@ -373,6 +381,8 @@ blackBack.addEventListener("click", closeModal);
 
 
 /*-------CONTACTS-------------*/
+const callMe = document.querySelector(".call-me");
+const textMe = document.querySelector(".text-me");
 
 let callMe_btn = document.querySelector(".call-me__btn");
 let callMe_content = document.querySelector(".call-me__content");
@@ -397,6 +407,11 @@ textMe_btn.addEventListener("click",()=>{
 
 })
 
+function removeAnimation_contactBtn(){
+    callMe_btn.classList.remove("call-me__btn_up");
+    textMe_btn.classList.remove("text-me__btn_down");
+}
+
 callMe_cancel.addEventListener("click", ()=>{
     callMe_content.style.visibility = "hidden";
     callMe_content.style.opacity = "0";  
@@ -408,4 +423,30 @@ textMe_cancel.addEventListener("click", ()=>{
    textMe_content.style.opacity = "0";  
     
 })
+
+callMe.addEventListener("mouseover", ()=>{
+    document.querySelector(".call-me__heading").classList.add("contact-text_clip");
+    document.querySelector(".text-me__heading").classList.remove("contact-text_clip");
+
+})
+
+textMe.addEventListener("mouseover", ()=>{
+    document.querySelector(".text-me__heading").classList.add("contact-text_clip");
+    document.querySelector(".call-me__heading").classList.remove("contact-text_clip");
+
+})
+
+callMe.addEventListener("mouseout", ()=>{
+    document.querySelector(".call-me__heading").classList.remove("contact-text_clip");
+})
+
+textMe.addEventListener("mouseout", ()=>{
+    document.querySelector(".text-me__heading").classList.remove("contact-text_clip");
+})
+
+function removeClip(){
+    document.querySelector(".text-me__heading").classList.remove("contact-text_clip");
+    document.querySelector(".call-me__heading").classList.remove("contact-text_clip");
+
+}
 
