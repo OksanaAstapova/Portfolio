@@ -251,8 +251,7 @@ $bg-yellow: lightgreen;
     display: flex;
     flex-direction: row;
     width: 90vw;
-    gap: 10%;
-    margin-left: 10%;
+    margin-left: 5vw;
 }
 
 .page__left-side{
@@ -266,9 +265,9 @@ $bg-yellow: lightgreen;
     }
    
     .page__button{
-        @include border-radius(50%);
-        width: 100px;
-        height: 100px;
+        @include border-radius(10px);
+        width: 15vw;
+        height: 8vh;
         font-family: $font;
         font-size: 1.1em;
         border: 2px gray solid;
@@ -296,18 +295,16 @@ $bg-yellow: lightgreen;
 
 
 .page__right-side{
-   margin-top: 10vh;
+   margin-top: 3vh;
 
    .screen{
     margin: 0%;
     position: absolute;
     display: flex;
     visibility: hidden;
+    gap: 3vh;
     opacity: 0;
     flex-direction: column;
-    background-color: $bg-yellow;
-    box-shadow: 1em 1em 1em rgba(60, 59, 59, 0.516);
-    @include border-radius(10px);
     transition: ease-in-out .8s, opacity ease-in-out .8s;
     transform: scale(0.9);
 }
@@ -317,7 +314,7 @@ $bg-yellow: lightgreen;
 }
 
 .screen__screenshot{
-    width: 60vw;
+    width: 70vw;
 }
 
 .screen__figcaption{
@@ -327,12 +324,16 @@ $bg-yellow: lightgreen;
     font-family: $font;
     font-size: 1.3em;
 
+    p{
+        font-size: 1.5em;
+    }
+
     button{
-        @include border-radius(50%);
+        @include border-radius(10px);
         border: 1.5px $bg-purple solid;
         background-color: $bg-purple;
-        height: 55px;
-        width: 55px;
+        height: 5vh;
+        width: 10vw;
         font-family: $font;
         font-size: 1.2em;
     }
@@ -345,6 +346,11 @@ $bg-yellow: lightgreen;
         box-shadow: 0 3px 0 #8c8c8c;
         transform: translateY(5px);
         transition: 0.3s;
+    }
+
+    .button-go_scale{
+        transform: scale(1.5);
+        transition: 2s;
     }
 }
 
@@ -924,9 +930,9 @@ $bg-yellow: lightgreen;
          .page__go-project{
             display: flex;
             justify-content: center;
-            @include border-radius(50%);
-            width: 120px;
-            height: 120px;
+            @include border-radius(10px);
+            width: 60vw;
+            height: 10vh;
             border: 1px black solid;
             user-select: none;
             text-decoration: none;

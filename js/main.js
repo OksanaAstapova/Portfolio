@@ -148,6 +148,8 @@ keyboard.addEventListener('click', () => {
    screenMem.classList.remove('screen_active'); 
    screenMkBaltic.classList.remove('screen_active'); 
 
+   removeScale();
+
 })
 
 shelter.addEventListener('click', () => {
@@ -160,6 +162,9 @@ shelter.addEventListener('click', () => {
    screenKeyboard.classList.remove('screen_active');
    screenMem.classList.remove('screen_active');
    screenMkBaltic.classList.remove('screen_active'); 
+   
+   removeScale();
+
 })
 
 mem.addEventListener('click', () => {
@@ -172,6 +177,9 @@ mem.addEventListener('click', () => {
     screenShelter.classList.remove('screen_active');
     screenShelter.classList.remove('screen_active');
     screenMkBaltic.classList.remove('screen_active'); 
+
+   removeScale();
+
 })
 
 mkBaltic.addEventListener('click', () => {
@@ -184,6 +192,9 @@ mkBaltic.addEventListener('click', () => {
     screenShelter.classList.remove('screen_active');
     screenShelter.classList.remove('screen_active');
     screenMkBaltic.classList.add('screen_active'); 
+
+   removeScale();
+
 })
 
 
@@ -208,6 +219,23 @@ document.querySelectorAll(".menu__button_click").forEach(k => {
 
     })
 })
+
+const screen = document.querySelectorAll(".screen__screenshot");
+
+screen.forEach(s => {
+    s.addEventListener("mouseover", ()=>{
+        document.querySelectorAll(".button-go").forEach(go =>{
+            go.classList.add("button-go_scale");
+        })
+    })
+})
+
+function removeScale(){
+    document.querySelectorAll(".button-go").forEach(go =>{
+        go.classList.remove("button-go_scale");
+    })
+}
+
 
 /*-------INSPIRATION-------------*/
 
@@ -288,6 +316,8 @@ const cardsData = [
 
 let k;
 let wrapper = document.querySelector(".gallery");
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     for(let k=0; k<18; k++){
