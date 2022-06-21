@@ -183,7 +183,7 @@ mem.addEventListener('click', () => {
  
     screenMem.classList.add('screen_active'); 
     screenShelter.classList.remove('screen_active');
-    screenShelter.classList.remove('screen_active');
+    screenKeyboard.classList.remove('screen_active');
     screenMkBaltic.classList.remove('screen_active'); 
 
    removeScale();
