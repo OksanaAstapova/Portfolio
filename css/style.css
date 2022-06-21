@@ -632,9 +632,6 @@
   justify-content: space-around;
   align-items: center;
   font-family: "Nunito", Arial, sans-serif;
-  font-size: 1.3em;
-}
-.page__right-side .screen__figcaption p {
   font-size: 1.5em;
 }
 .page__right-side .screen__figcaption button {
@@ -645,10 +642,10 @@
   border-radius: 10px;
   border: 1.5px #b168e8 solid;
   background-color: #b168e8;
-  height: 5vh;
+  height: 7vh;
   width: 10vw;
   font-family: "Nunito", Arial, sans-serif;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 .page__right-side .screen__figcaption button:active {
   box-shadow: 0 3px 0 #8c8c8c;
@@ -656,8 +653,30 @@
   transition: 0.3s;
 }
 .page__right-side .screen__figcaption .button-go_scale {
-  transform: scale(1.5);
-  transition: 2s;
+  animation: wiggle 2s linear infinite;
+}
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
 }
 
 /*------------inspiration-----------*/

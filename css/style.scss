@@ -322,20 +322,18 @@ $bg-yellow: lightgreen;
     justify-content: space-around;
     align-items: center;
     font-family: $font;
-    font-size: 1.3em;
+    font-size: 1.5em;
 
-    p{
-        font-size: 1.5em;
-    }
-
+   
     button{
         @include border-radius(10px);
         border: 1.5px $bg-purple solid;
         background-color: $bg-purple;
-        height: 5vh;
+        height: 7vh;
         width: 10vw;
         font-family: $font;
-        font-size: 1.2em;
+        font-size: 1.5em;
+
     }
 
     button:hover{
@@ -349,9 +347,32 @@ $bg-yellow: lightgreen;
     }
 
     .button-go_scale{
-        transform: scale(1.5);
-        transition: 2s;
+         animation: wiggle 2s linear infinite;
+
     }
+    @keyframes wiggle {
+        0%, 7% {
+          transform: rotateZ(0);
+        }
+        15% {
+          transform: rotateZ(-15deg);
+        }
+        20% {
+          transform: rotateZ(10deg);
+        }
+        25% {
+          transform: rotateZ(-10deg);
+        }
+        30% {
+          transform: rotateZ(6deg);
+        }
+        35% {
+          transform: rotateZ(-4deg);
+        }
+        40%, 100% {
+          transform: rotateZ(0);
+        }
+      }
 }
 
 }
