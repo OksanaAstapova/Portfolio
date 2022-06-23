@@ -1074,6 +1074,10 @@
     align-content: center;
     box-shadow: 5px 5px 15px 5px #a7a7a7;
   }
+  .box-wrapper .text-me .visible {
+    visibility: visible;
+    opacity: 1;
+  }
   .box-wrapper .call-me {
     align-items: center;
   }
@@ -1138,6 +1142,10 @@
     margin-top: 40vh;
     z-index: 2;
     box-shadow: 5px 5px 15px 5px #686868;
+  }
+  .box-wrapper .call-me .visible {
+    visibility: visible;
+    opacity: 1;
   }
 }
 @media (max-width: 690px) {

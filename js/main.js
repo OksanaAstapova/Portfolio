@@ -379,17 +379,15 @@ function removeAnimation_contactBtn(){
     textMe_btn.classList.remove("text-me__btn_down");
 }
 
-callMe_cancel.addEventListener("click", ()=>{
-    callMe_content.style.visibility = "hidden";
-    callMe_content.style.opacity = "0";  
+document.querySelectorAll(['.call-me__cancel, .text-me__cancel']).forEach(button =>{
+    button.addEventListener("click", ()=>{
     
-})
+        textMe_content.classList.remove("visible");
+        callMe_content.classList.remove("visible");
 
-textMe_cancel.addEventListener("click", ()=>{
-   textMe_content.style.visibility = "hidden";
-   textMe_content.style.opacity = "0";  
-    
-})
+    })
+});
+   
 
 callMe.addEventListener("mouseover", ()=>{
     document.querySelector(".call-me__heading").classList.add("contact-text_clip");
@@ -403,12 +401,8 @@ textMe.addEventListener("mouseover", ()=>{
 
 })
 
-callMe.addEventListener("mouseout", ()=>{
-    document.querySelector(".call-me__heading").classList.remove("contact-text_clip");
-})
-
-textMe.addEventListener("mouseout", ()=>{
-    document.querySelector(".text-me__heading").classList.remove("contact-text_clip");
+document.querySelectorAll(['.call-me', '.text-me']).forEach(k =>{
+    k.addEventListener("mouseout", removeClip);
 })
 
 function removeClip(){
