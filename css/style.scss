@@ -149,12 +149,11 @@ $bg-yellow: lightgreen;
     .language__lt{
         background-image: url(../assets/icons/lt-lang.jpg);
     }
-
-    .languages:hover{
-        cursor: pointer;
+    .languages:not(.language_active):hover{
+        cursor: pointer;    
     }
-
-    .languages:active{
+    
+    .languages:not(.language_active):active{
         transform: translateY(5px);
     }
 }

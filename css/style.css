@@ -467,10 +467,10 @@
 .language .language__lt {
   background-image: url(../assets/icons/lt-lang.jpg);
 }
-.language .languages:hover {
+.language .languages:not(.language_active):hover {
   cursor: pointer;
 }
-.language .languages:active {
+.language .languages:not(.language_active):active {
   transform: translateY(5px);
 }
 

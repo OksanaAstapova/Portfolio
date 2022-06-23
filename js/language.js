@@ -33,8 +33,14 @@ buttonBel.addEventListener("click", ()=>{
     document.querySelector(".text-me__btn_text").textContent = "Напiшыце мне";
     document.querySelector(".call-me__heading").textContent = "Пазванiце мне";
     document.querySelector(".text-me__heading").textContent = "Напiшыце мне";
-   
 
+    buttonBel.setAttribute("disabled", 'true');
+    buttonBel.classList.add("language_active");
+
+    document.querySelectorAll('.languages:not(:nth-child(2)').forEach(btn=>{
+        btn.removeAttribute("disabled");
+        btn.classList.remove("language_active");
+    })
 })
 
 buttonEng.addEventListener("click", ()=>{
@@ -65,6 +71,14 @@ buttonEng.addEventListener("click", ()=>{
     document.querySelector(".call-me__heading").textContent = "Call me";
     document.querySelector(".text-me__heading").textContent = "Text me";
 
+     buttonEng.setAttribute("disabled", 'true');
+     buttonEng.classList.add("language_active");
+
+     document.querySelectorAll('.languages:not(:nth-child(1)').forEach(btn=>{
+         btn.removeAttribute("disabled");
+         btn.classList.remove("language_active");
+     })
+
 })
 
 buttonRus.addEventListener("click", ()=>{
@@ -94,6 +108,14 @@ buttonRus.addEventListener("click", ()=>{
     document.querySelector(".text-me__btn_text").textContent = "Напишите мне";
     document.querySelector(".call-me__heading").textContent = "Позвоните мне";
     document.querySelector(".text-me__heading").textContent = "Напишите мне";
+    
+     buttonRus.setAttribute("disabled", 'true');
+     buttonRus.classList.add("language_active");
+
+     document.querySelectorAll('.languages:not(:nth-child(3)').forEach(btn=>{
+         btn.removeAttribute("disabled");
+         btn.classList.remove("language_active");
+     })
 
 })
 
@@ -123,5 +145,13 @@ buttonLit.addEventListener("click", ()=>{
     document.querySelector(".text-me__btn_text").textContent = "Parašyk man";
     document.querySelector(".call-me__heading").textContent = "Paskambink man";
     document.querySelector(".text-me__heading").textContent = "Parašyk man";
+
+     buttonLit.setAttribute("disabled", 'true');
+     buttonLit.classList.add("language_active");
+
+     document.querySelectorAll('.languages:not(:nth-child(4)').forEach(btn=>{
+         btn.removeAttribute("disabled");
+         btn.classList.remove("language_active");
+     })
 
 })

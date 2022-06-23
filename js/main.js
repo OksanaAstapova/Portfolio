@@ -198,7 +198,7 @@ mkBaltic.addEventListener('click', () => {
  
     screenMem.classList.remove('screen_active'); 
     screenShelter.classList.remove('screen_active');
-    screenShelter.classList.remove('screen_active');
+    screenKeyboard.classList.remove('screen_active');
     screenMkBaltic.classList.add('screen_active'); 
 
    removeScale();
