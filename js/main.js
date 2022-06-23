@@ -1,113 +1,85 @@
-let start =  document.querySelector(".start-page");
-let projects =  document.querySelector(".projects-page");
-let inspiration =  document.querySelector(".inspiration-page");
-let contacts = document.querySelector(".contacts-page");
-
 let welcomeBtn = document.querySelector(".menu__button_welcome");
 let projectsBtn = document.querySelector(".menu__button_projects");
 let inspirationBtn = document.querySelector(".menu__button_inspiration");
 let contactsBtn = document.querySelector(".menu__button_contacts");
 let start_pageBtn = document.querySelector(".info__button");
+let inspiration = document.querySelector(".inspiration-page");
 
 welcomeBtn.addEventListener("click", ()=>{
     welcomeBtn.classList.add("menu__button_active");
-    projectsBtn.classList.remove("menu__button_active");
-    inspirationBtn.classList.remove("menu__button_active");
-    contactsBtn.classList.remove("menu__button_active");
+    
+    document.querySelectorAll('.menu__button:not(.menu__button_welcome)').forEach(btn =>{
+        btn.classList.remove("menu__button_active");
+    })
 
-    start.style.visibility = "visible";
-    start.style.opacity = "1";
-    projects.style.visibility = "hidden";
-    projects.style.opacity = "0";
-    inspiration.style.visibility = "hidden";
-    inspiration.style.opacity = "0";
-    contacts.style.visibility = "hidden";
-    contacts.style.opacity = "0";
+    document.querySelector(".start-page").classList.add('visible');
 
-   removeAnimation_contactBtn();
-   removeScale();
-   removeClip();
+    document.querySelectorAll('section:not(.start-page)').forEach(section =>{
+        section.classList.remove("visible");
+    })
 
-})
+  })
 
 projectsBtn.addEventListener("click", ()=>{
     projectsBtn.classList.add("menu__button_active");
-    welcomeBtn.classList.remove("menu__button_active");
-    inspirationBtn.classList.remove("menu__button_active");
-    contactsBtn.classList.remove("menu__button_active");
+    
+    document.querySelectorAll('.menu__button:not(.menu__button_projects)').forEach(btn =>{
+        btn.classList.remove("menu__button_active");
+    })
 
-    projects.style.visibility = "visible";
-    projects.style.opacity = "1";
-    start.style.visibility = "hidden";
-    start.style.opacity = "0";
-    inspiration.style.visibility = "hidden";
-    inspiration.style.opacity = "0";
-    contacts.style.visibility = "hidden";
-    contacts.style.opacity = "0";
-
-    document.querySelector(".go-project_right_keyboard").classList.add("transition-right");
-    document.querySelector(".go-project_right_mem").classList.add("transition-right");
-    document.querySelector(".go-project_left").classList.add("transition-left");
-
-    removeAnimation_contactBtn()
-    removeScale();
-    removeClip();
+    document.querySelector(".projects-page").classList.add('visible');
+    document.querySelectorAll('section:not(.projects-page)').forEach(btn =>{
+        btn.classList.remove("visible");
+    })
 
 })
 
 inspirationBtn.addEventListener("click", ()=>{
     inspirationBtn.classList.add("menu__button_active");
-    welcomeBtn.classList.remove("menu__button_active");
-    projectsBtn.classList.remove("menu__button_active");
-    contactsBtn.classList.remove("menu__button_active");
+    
+    document.querySelectorAll('.menu__button:not(.menu__button_inspiration)').forEach(btn =>{
+        btn.classList.remove("menu__button_active");
+    })
 
-    inspiration.style.visibility = "visible";
-    inspiration.style.opacity = "1";
-    projects.style.visibility = "hidden";
-    projects.style.opacity = "0";
-    start.style.visibility = "hidden";
-    start.style.opacity = "0";
-    contacts.style.visibility = "hidden";
-    contacts.style.opacity = "0";
-
-    removeAnimation_contactBtn()
-    removeScale();
-    removeClip();
-
+    inspiration.classList.add('visible');
+    document.querySelectorAll('section:not(.inspiration-page)').forEach(btn =>{
+        btn.classList.remove("visible");
+    })
 
 })
 
 contactsBtn.addEventListener("click", ()=>{
     contactsBtn.classList.add("menu__button_active");
-    welcomeBtn.classList.remove("menu__button_active");
-    projectsBtn.classList.remove("menu__button_active");
-    inspirationBtn.classList.remove("menu__button_active");
 
-    contacts.style.visibility = "visible";
-    contacts.style.opacity = "1";
-    projects.style.visibility = "hidden";
-    projects.style.opacity = "0";
-    inspiration.style.visibility = "hidden";
-    inspiration.style.opacity = "0";
-    start.style.visibility = "hidden";
-    start.style.opacity = "0";
+    document.querySelectorAll('.menu__button:not(.menu__button_contacts)').forEach(btn =>{
+        btn.classList.remove("menu__button_active");
+    })
+
+    document.querySelector(".contacts-page").classList.add('visible');
+    document.querySelectorAll('section:not(.contacts-page)').forEach(btn =>{
+        btn.classList.remove("visible");
+    })
 
     callMe_btn.classList.add("call-me__btn_up");
     textMe_btn.classList.add("text-me__btn_down");
 
     removeScale();
-     removeClip();
+    removeClip();
 
-
+   
 
 })
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    start.style.visibility = "visible";
-    start.style.opacity = "1";
+document.querySelectorAll(".menu__button:not(.menu__button_contacts)").forEach(button =>{
+    button.addEventListener("click", ()=>{
+        removeAnimation_contactBtn();
+        removeScale();
+        removeClip();
+    })
+})
 
-    
-   
+document.addEventListener("DOMContentLoaded", ()=>{
+    document.querySelector(".start-page").classList.add('visible');
 })
 
 start_pageBtn.addEventListener("click", ()=>{
@@ -140,21 +112,17 @@ let keyboard = document.querySelector('.page__button_keyboard');
 let shelter = document.querySelector('.page__button_shelter');
 let mem = document.querySelector('.page__button_mem');
 let mkBaltic = document.querySelector('.page__button_mk-baltic');
-let screenKeyboard = document.querySelector('.screen_keyboard');
-let screenShelter = document.querySelector('.screen_shelter');
-let screenMem = document.querySelector('.screen_mem');
-let screenMkBaltic = document.querySelector('.screen_mk-baltic');
-
+ 
 keyboard.addEventListener('click', () => {
    keyboard.classList.add('page__button_active'); 
-   shelter.classList.remove('page__button_active');
-   mem.classList.remove('page__button_active');
-   mkBaltic.classList.remove('page__button_active');
+   document.querySelectorAll('.page__button:not(.page__button_keyboard)').forEach(btn =>{
+    btn.classList.remove("page__button_active");
+})
 
-   screenKeyboard.classList.add('screen_active');
-   screenShelter.classList.remove('screen_active');
-   screenMem.classList.remove('screen_active'); 
-   screenMkBaltic.classList.remove('screen_active'); 
+    document.querySelector('.screen_keyboard').classList.add('screen_active');
+    document.querySelectorAll('.screen:not(.screen_keyboard)').forEach(btn =>{
+    btn.classList.remove("screen_active");
+}) 
 
    removeScale();
 
@@ -162,14 +130,15 @@ keyboard.addEventListener('click', () => {
 
 shelter.addEventListener('click', () => {
    shelter.classList.add('page__button_active'); 
-   keyboard.classList.remove('page__button_active');
-   mem.classList.remove('page__button_active');
-   mkBaltic.classList.remove('page__button_active');
+
+   document.querySelectorAll('.page__button:not(.page__button_shelter)').forEach(btn =>{
+    btn.classList.remove("page__button_active");
+})
    
-   screenShelter.classList.add('screen_active'); 
-   screenKeyboard.classList.remove('screen_active');
-   screenMem.classList.remove('screen_active');
-   screenMkBaltic.classList.remove('screen_active'); 
+    document.querySelector('.screen_shelter').classList.add('screen_active'); 
+   document.querySelectorAll('.screen:not(.screen_shelter)').forEach(btn =>{
+    btn.classList.remove("screen_active");
+}) 
    
    removeScale();
 
@@ -177,14 +146,15 @@ shelter.addEventListener('click', () => {
 
 mem.addEventListener('click', () => {
     mem.classList.add('page__button_active'); 
-    keyboard.classList.remove('page__button_active');
-    shelter.classList.remove('page__button_active');
-    mkBaltic.classList.remove('page__button_active');
+
+     document.querySelectorAll('.page__button:not(.page__button_mem)').forEach(btn =>{
+    btn.classList.remove("page__button_active");
+})
  
-    screenMem.classList.add('screen_active'); 
-    screenShelter.classList.remove('screen_active');
-    screenKeyboard.classList.remove('screen_active');
-    screenMkBaltic.classList.remove('screen_active'); 
+    document.querySelector('.screen_mem').classList.add('screen_active'); 
+    document.querySelectorAll('.screen:not(.screen_mem)').forEach(btn =>{
+        btn.classList.remove("screen_active");
+    })  
 
    removeScale();
 
@@ -192,14 +162,14 @@ mem.addEventListener('click', () => {
 
 mkBaltic.addEventListener('click', () => {
     mem.classList.remove('page__button_active'); 
-    keyboard.classList.remove('page__button_active');
-    shelter.classList.remove('page__button_active');
-    mkBaltic.classList.add('page__button_active');
- 
-    screenMem.classList.remove('screen_active'); 
-    screenShelter.classList.remove('screen_active');
-    screenKeyboard.classList.remove('screen_active');
-    screenMkBaltic.classList.add('screen_active'); 
+
+    document.querySelectorAll('.page__button:not(.page__button_mk-baltic)').forEach(btn =>{
+    btn.classList.remove("page__button_active");
+})
+    document.querySelector('.screen_mk-baltic').classList.add('screen_active'); 
+    document.querySelectorAll('.screen:not(.screen_mk-baltic)').forEach(btn =>{
+        btn.classList.remove("screen_active");
+    }) 
 
    removeScale();
 
@@ -393,17 +363,14 @@ let textMe_cancel = document.querySelector(".text-me__cancel");
 
 callMe_btn.addEventListener("click",()=>{
 
-    callMe_content.style.visibility = "visible";
-    callMe_content.style.opacity = "1";
+    callMe_content.classList.add("visible");
 
 })
 
 
 textMe_btn.addEventListener("click",()=>{
 
-    textMe_cancel.style.display = "flex";
-    textMe_content.style.visibility = "visible";
-    textMe_content.style.opacity = "1";
+    textMe_content.classList.add("visible");
 
 })
 

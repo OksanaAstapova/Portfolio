@@ -41,6 +41,10 @@
   visibility: hidden;
   opacity: 0;
 }
+.body .visible {
+  visibility: visible;
+  opacity: 1;
+}
 
 .menu-mobile {
   width: 100vw;
@@ -850,6 +854,10 @@
   flex-direction: column;
   gap: 30px;
   align-items: center;
+}
+.box-wrapper .call-me .hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 .box-wrapper .call-me .call-me__cancel {
   display: none;

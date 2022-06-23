@@ -30,6 +30,7 @@ $bg-yellow: lightgreen;
     border-radius: $property;
 }
 
+
 .sections{
     @extend %bg-shared;
     transition: ease-in-out .8s, opacity ease-in-out .8s;
@@ -59,6 +60,12 @@ $bg-yellow: lightgreen;
         position: absolute;
         visibility: hidden;
         opacity: 0;
+    }
+
+
+    .visible{
+        visibility: visible;
+        opacity: 1;
     }
 }
 .menu-mobile{
@@ -562,6 +569,11 @@ $bg-yellow: lightgreen;
             flex-direction: column;
             gap: 30px;
             align-items: center;
+        }
+
+        .hidden{
+            visibility: hidden;
+            opacity: 0;
         }
 
         .call-me__cancel{
