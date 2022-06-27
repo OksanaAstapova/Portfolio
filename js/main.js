@@ -8,7 +8,8 @@ let inspiration = document.querySelector(".inspiration-page");
 window.onload = function () {
     window.setTimeout(function () {
      document.querySelector('.preloader').style.visibility = 'hidden';
-    }, 2000);
+     document.querySelector('.preloader').style.opacity = '0';
+    }, 2010);
   }
 
 welcomeBtn.addEventListener("click", ()=>{
