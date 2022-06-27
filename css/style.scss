@@ -30,6 +30,20 @@ $bg-yellow: lightgreen;
     border-radius: $property;
 }
 
+.preloader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image:  url(../assets/background/MyPortfolio1.jpg);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: visible;
+    transition: 0.5s;
+
+}
+
 
 .sections{
     @extend %bg-shared;

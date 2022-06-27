@@ -5,6 +5,12 @@ let contactsBtn = document.querySelector(".menu__button_contacts");
 let start_pageBtn = document.querySelector(".info__button");
 let inspiration = document.querySelector(".inspiration-page");
 
+window.onload = function () {
+    window.setTimeout(function () {
+     document.querySelector('.preloader').style.visibility = 'hidden';
+    }, 2000);
+  }
+
 welcomeBtn.addEventListener("click", ()=>{
     welcomeBtn.classList.add("menu__button_active");
     
