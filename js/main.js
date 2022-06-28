@@ -1,3 +1,10 @@
+
+window.onload = function () {
+    window.setTimeout(function () {
+    document.querySelector('.preloader').style.visibility = 'hidden';
+    }, 2000);
+  }
+
 let welcomeBtn = document.querySelector(".menu__button_welcome");
 let projectsBtn = document.querySelector(".menu__button_projects");
 let inspirationBtn = document.querySelector(".menu__button_inspiration");
