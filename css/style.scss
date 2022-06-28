@@ -400,9 +400,6 @@ $bg-yellow: lightgreen;
 
 /*------------inspiration-----------*/
 
-.scroll-top{
-   position: absolute;
-}
 .gallery{
     display: flex;
     flex-direction: row;
@@ -524,30 +521,6 @@ $bg-yellow: lightgreen;
     margin: 0px;
     cursor: pointer;
 }
-
-.inspiration-page__button{
-    display: none;
-    position: fixed;
-    width: 60px;
-    height: 60px;
-   background-image: url(../assets/icons/up-arrow.png);
-   @extend %bg-shared; 
-   background-color: unset;
-   border: none;
-   top: 87vh;
-    right: 5vw;
-    @include border-radius(50%);
-    box-shadow: 2px 5px 2px #474747;
-   z-index: 5;
-   transition: .3s;
-   cursor: pointer;
-}
-
-.inspiration-page__button:active{
-
-    transform: translateY(7px);
-}
-
 
 /*----------CONTACTS--------------*/
 
