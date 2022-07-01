@@ -2,6 +2,8 @@
 window.onload = function () {
     window.setTimeout(function () {
     document.querySelector('.preloader').style.visibility = 'hidden';
+    document.querySelector('.body').style.visibility = 'visible';
+
     }, 2000);
   }
 

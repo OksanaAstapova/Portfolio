@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-.box-wrapper, .inspiration-page__button, .language .languages, .sections {
+.box-wrapper, .language .languages, .sections {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,6 +45,7 @@
 }
 
 .body {
+  visibility: hidden;
   overflow: hidden;
   margin: 0;
   background-image: url(../assets/background/MyPortfolio1.jpg);
@@ -697,10 +698,6 @@
 }
 
 /*------------inspiration-----------*/
-.scroll-top {
-  position: absolute;
-}
-
 .gallery {
   display: flex;
   flex-direction: row;
@@ -807,31 +804,6 @@
   z-index: 8;
   margin: 0px;
   cursor: pointer;
-}
-
-.inspiration-page__button {
-  display: none;
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  background-image: url(../assets/icons/up-arrow.png);
-  background-color: unset;
-  border: none;
-  top: 87vh;
-  right: 5vw;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  box-shadow: 2px 5px 2px #474747;
-  z-index: 5;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.inspiration-page__button:active {
-  transform: translateY(7px);
 }
 
 /*----------CONTACTS--------------*/
